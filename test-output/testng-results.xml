@@ -1,73 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
+  <suite name="Default suite" duration-ms="6618" started-at="2019-10-03T15:58:04 PDT" finished-at="2019-10-03T15:58:10 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="63" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-      <class name="com.test.Testng1AnnotationSequence">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="setUp" is-config="true" duration-ms="20" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
+    <test name="Default test" duration-ms="6618" started-at="2019-10-03T15:58:04 PDT" finished-at="2019-10-03T15:58:10 PDT">
+      <class name="com.test.GoogleTest2">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.GoogleTest2@4493d195]" name="setUp" is-config="true" duration-ms="5821" started-at="2019-10-03T15:58:04 PDT" finished-at="2019-10-03T15:58:10 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="launchBrowser" is-config="true" duration-ms="1" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="logIn()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="logIn" is-config="true" duration-ms="0" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logIn -->
-        <test-method status="PASS" signature="enterURL()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="enterURL" is-config="true" duration-ms="0" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterURL -->
-        <test-method status="PASS" signature="googleLogoTest()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="googleLogoTest" duration-ms="7" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googleLogoTest -->
-        <test-method status="PASS" signature="logOut()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="logOut" is-config="true" duration-ms="1" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logOut -->
-        <test-method status="PASS" signature="enterURL()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="enterURL" is-config="true" duration-ms="1" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterURL -->
-        <test-method status="PASS" signature="googleTitleTest()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="googleTitleTest" duration-ms="1" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
+        <test-method status="PASS" signature="googleTitleTest()[pri:0, instance:com.test.GoogleTest2@4493d195]" name="googleTitleTest" duration-ms="15" started-at="2019-10-03T15:58:10 PDT" finished-at="2019-10-03T15:58:10 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleTitleTest -->
-        <test-method status="PASS" signature="logOut()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="logOut" is-config="true" duration-ms="6" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.GoogleTest2@4493d195]" name="tearDown" is-config="true" duration-ms="730" started-at="2019-10-03T15:58:10 PDT" finished-at="2019-10-03T15:58:10 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logOut -->
-        <test-method status="PASS" signature="enterURL()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="enterURL" is-config="true" duration-ms="0" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterURL -->
-        <test-method status="PASS" signature="searchTest()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="searchTest" duration-ms="5" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="logOut()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="logOut" is-config="true" duration-ms="1" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logOut -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="deleteAllCookies()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="deleteAllCookies" is-config="true" duration-ms="0" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAllCookies -->
-        <test-method status="PASS" signature="generateTestReport()[pri:0, instance:com.test.Testng1AnnotationSequence@76f2b07d]" name="generateTestReport" is-config="true" duration-ms="0" started-at="2019-10-03T14:02:48 PDT" finished-at="2019-10-03T14:02:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateTestReport -->
-      </class> <!-- com.test.Testng1AnnotationSequence -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.test.GoogleTest2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
