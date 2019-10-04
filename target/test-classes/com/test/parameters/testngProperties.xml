@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Parameterization Automation Suite">
+
+
+	<test name="Test name here: Yahoo Login Test">
+	
+        <parameter name="env" value="qa"/>
+		<parameter name="browser" value="chrome"/>
+		<parameter name="url" value="https://www.yahoo.com/"/>
+		<parameter name="username" value="test@yahoo.com"/>
+		<parameter name="password" value="test123"/>
+		
+		<classes>
+			<class name="com.parameters.TestNG7ParametersTest" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

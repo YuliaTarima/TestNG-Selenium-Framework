@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Functional Automation Suite">
+
+
+	<test name="Test name here: e.g., TestNG Features Test">
+		<classes>
+			<class name="com.test.TestNG1AnnotationSequenceTest" />
+			<class name="com.test.TestNG2GoogleTest" />
+			<class name="com.test.TestNG3DependencyTest" />
+		    <class name="com.test.TestNG4InvocationCountTest" />
+		    <class name="com.test.TestNG5ExceptionTimeoutExpectedException" />
+		    <class name="com.test.TestNG6GoogleTitleTest" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Functional Automation Suite]">
+  <test thread-count="5" name="Test name here: e.g., TestNG Features Test(failed)">
+    <classes>
+      <class name="com.test.TestNG5ExceptionTimeoutExpectedException">
+        <methods>
+          <include name="infiniteLoopTest"/>
+        </methods>
+      </class> <!-- com.test.TestNG5ExceptionTimeoutExpectedException -->
+    </classes>
+  </test> <!-- Test name here: e.g., TestNG Features Test(failed) -->
+</suite> <!-- Failed suite [Functional Automation Suite] -->
