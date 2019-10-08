@@ -2,24 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9943" started-at="2019-10-04T16:11:12 PDT" finished-at="2019-10-04T16:11:22 PDT">
+  <suite name="Default suite" duration-ms="14858" started-at="2019-10-08T14:19:13 PDT" finished-at="2019-10-08T14:19:28 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9943" started-at="2019-10-04T16:11:12 PDT" finished-at="2019-10-04T16:11:22 PDT">
-      <class name="com.test.dataprovider.TestNG8DataProviderTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.dataprovider.TestNG8DataProviderTest@2781e022]" name="setUp" is-config="true" duration-ms="6565" started-at="2019-10-04T16:11:12 PDT" finished-at="2019-10-04T16:11:19 PDT">
+    <test name="Default test" duration-ms="14858" started-at="2019-10-08T14:19:13 PDT" finished-at="2019-10-08T14:19:28 PDT">
+      <class name="com.test.dataprovider.TestNG9ParameterizedExpresssRegTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.dataprovider.TestNG9ParameterizedExpresssRegTest@4493d195]" name="setUp" is-config="true" duration-ms="14102" started-at="2019-10-08T14:19:13 PDT" finished-at="2019-10-08T14:19:27 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="regPageTest()[pri:0, instance:com.test.dataprovider.TestNG8DataProviderTest@2781e022]" name="regPageTest" duration-ms="2536" started-at="2019-10-04T16:11:19 PDT" finished-at="2019-10-04T16:11:21 PDT">
+        <test-method status="PASS" signature="enterRegInfo()[pri:0, instance:com.test.dataprovider.TestNG9ParameterizedExpresssRegTest@4493d195]" name="enterRegInfo" duration-ms="706" started-at="2019-10-08T14:19:27 PDT" finished-at="2019-10-08T14:19:28 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.dataprovider.TestNG8DataProviderTest@2781e022]" name="tearDown" is-config="true" duration-ms="790" started-at="2019-10-04T16:11:21 PDT" finished-at="2019-10-04T16:11:22 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.test.dataprovider.TestNG8DataProviderTest -->
+        </test-method> <!-- enterRegInfo -->
+      </class> <!-- com.test.dataprovider.TestNG9ParameterizedExpresssRegTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
