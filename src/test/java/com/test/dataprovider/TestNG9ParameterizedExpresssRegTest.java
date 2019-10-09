@@ -1,11 +1,14 @@
 package com.test.dataprovider;
 
+import java.util.ArrayList;
 import java.util.List;
-import com.util.Xls_Reader;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+
+import com.util.Xls_Reader;
 
 public class TestNG9ParameterizedExpresssRegTest extends TestBase {
 
@@ -16,6 +19,13 @@ public class TestNG9ParameterizedExpresssRegTest extends TestBase {
 
 		int rowCount = reader.getRowCount("RegTestData");
 		int colCount = reader.getColumnCount("RegTestData");
+		
+		List<String> elementNames = new ArrayList<String>();
+		elementNames.add("loginName");
+		elementNames.add("firstname");
+		elementNames.add("lastname");
+		elementNames.add("password");
+		elementNames.add("country");
 
 		// parameterization
 		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
@@ -23,8 +33,29 @@ public class TestNG9ParameterizedExpresssRegTest extends TestBase {
 			for (int colNum = 0; colNum <= colCount; colNum++) {
 				
 				String cellValue = reader.getCellData("RegTestData", colNum, rowNum);
-				System.out.println(cellValue);
+				System.out.println("Cell value1: " + cellValue);				
 				
+//				for (int elemNum = 0; elemNum < elementNames.size();elemNum++) {
+					if (elementNames.get(colNum) == "country") {
+
+						String userCountry = reader.getCellData("RegTestData", "country", rowNum);
+						Select country = new Select(driver.findElement(By.name("country")));
+						country.selectByVisibleText(userCountry);
+
+					} else {
+						WebElement regElement = driver.findElement(By.name(elementNames.get(colNum)));
+						System.out.println("RegElement is: " + elementNames.get(colNum));
+
+						regElement.clear();
+						regElement.sendKeys(cellValue);
+					}
+					
+					System.out.println("Cell value2: " + cellValue);
+					
+//				}
+
+
+
 //				String eMail = reader.getCellData("RegTestData", "email", rowNum);
 //				WebElement loginName = driver.findElement(By.name("loginName"));
 //				loginName.clear();
