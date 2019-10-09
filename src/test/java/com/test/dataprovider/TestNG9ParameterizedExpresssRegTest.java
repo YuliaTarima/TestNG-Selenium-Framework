@@ -13,48 +13,44 @@ import com.util.Xls_Reader;
 public class TestNG9ParameterizedExpresssRegTest extends TestBase {
 
 	@Test
-	public void enterRegInfo() {
-		Xls_Reader reader = new Xls_Reader(
-				System.getProperty("user.dir") + "/src/main/java/com/testdata/ExpressRegistrationTestdata.xlsx");
-
-		int rowCount = reader.getRowCount("RegTestData");
-		int colCount = reader.getColumnCount("RegTestData");
+	public void validateCreateNewContact() {
 		
 		List<String> elementNames = new ArrayList<String>();
 		elementNames.add("loginName");
 		elementNames.add("firstname");
 		elementNames.add("lastname");
 		elementNames.add("password");
-		elementNames.add("country");
+		
+		Xls_Reader reader = new Xls_Reader(
+				System.getProperty("user.dir") + "/src/main/java/com/testdata/ExpressRegistrationTestdata.xlsx");
+
+		int rowCount = reader.getRowCount("RegTestData");
+		int colCount = reader.getColumnCount("RegTestData");
+		// System.out.println(rowCount + " | " + colCount);
+
+		
 
 		// parameterization
+		// rewrite this as foreach as it is less prone to index errors and is more
+		// efficient
 		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
 
-			for (int colNum = 0; colNum <= colCount; colNum++) {
-				
+			for (int colNum = 0; colNum < colCount; colNum++) {
+				System.out.println("C: " + colNum);
+
 				String cellValue = reader.getCellData("RegTestData", colNum, rowNum);
-				System.out.println("Cell value1: " + cellValue);				
-				
-//				for (int elemNum = 0; elemNum < elementNames.size();elemNum++) {
-					if (elementNames.get(colNum) == "country") {
 
-						String userCountry = reader.getCellData("RegTestData", "country", rowNum);
-						Select country = new Select(driver.findElement(By.name("country")));
-						country.selectByVisibleText(userCountry);
+				System.out.println(colNum + " -> " + cellValue);
 
-					} else {
-						WebElement regElement = driver.findElement(By.name(elementNames.get(colNum)));
-						System.out.println("RegElement is: " + elementNames.get(colNum));
+				String elemNum = elementNames.get(colNum);
+				WebElement regElement = driver.findElement(By.name(elemNum));
+				System.out.println("RegElement is: " + elementNames.get(colNum));
+				regElement.clear();
+				regElement.sendKeys(cellValue);				
+			}
+	
 
-						regElement.clear();
-						regElement.sendKeys(cellValue);
-					}
-					
-					System.out.println("Cell value2: " + cellValue);
-					
-//				}
-
-
+		}
 
 //				String eMail = reader.getCellData("RegTestData", "email", rowNum);
 //				WebElement loginName = driver.findElement(By.name("loginName"));
@@ -80,7 +76,7 @@ public class TestNG9ParameterizedExpresssRegTest extends TestBase {
 //				Select country = new Select(driver.findElement(By.name("country")));
 //				country.selectByVisibleText(userCountry);
 
-				// deal with reCaptcha
+		// deal with reCaptcha
 //				List<WebElement> isPresent = driver
 //						.findElements(By.xpath("//div[@class='recaptcha-checkbox-checkmark' and role='presentation']"));
 //				if (isPresent.size() > 0) {
@@ -90,9 +86,6 @@ public class TestNG9ParameterizedExpresssRegTest extends TestBase {
 //				System.out.println("clicked recaptcha");
 //
 //				driver.findElement(By.xpath("//button[@type='submit' and contains(text(),'Create Account')]")).click();
-
-			}
-		}
 
 	}
 }
