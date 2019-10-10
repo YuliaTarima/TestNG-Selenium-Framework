@@ -18,44 +18,11 @@ import com.util.Xls_Reader;
 
 public class TestNG09DataProviderExpressTest extends TestBase {
 
-//		public static void main(String[] args) {
-//			
-//		}
-
-//	@Test
-//	public static void findName() {
-
-//		WebElement loginName = driver.findElement(By.name("loginName"));
-//		loginName.clear();
-//		loginName.sendKeys("Yulk,smhrkjwhfldjglkdglkj");
-//
-//		
-//		
-//		WebElement fname = driver.findElement(By.name("firstname"));
-//		fname.clear();
-//		fname.sendKeys("Yulk,smhrkjwhfldjglkdglkj");
-//		
-//		WebElement lname = driver.findElement(By.name("lastname"));
-//		lname.clear();
-//		lname.sendKeys("Yulk,smhrkjwhfldjglkdglkj");
-//		
-//		WebElement password = driver.findElement(By.name("password"));
-//		password.clear();
-//		password.sendKeys("Yulk,smhrkjwhfldjglkdglkj");
-//		
-//		Select country = new Select(driver.findElement(By.name("country")));
-//		country.selectByVisibleText("Ireland");
-//
-//        	// deal with reCaptcha
-//
-//			List<WebElement> isPresent = driver.findElements(By.xpath("//div[@class='recaptcha-checkbox-checkmark' and role='presentation']"));
-//			if (isPresent.size() > 0){
-//				driver.findElement(By.xpath("//div[@class='recaptcha-checkbox-checkmark' and role='presentation']")).click();
-//			}
-//			System.out.println("clicked recaptcha");
-//			
-//			driver.findElement(By.xpath("//button[@type='submit' and contains(text(),'Create Account')]")).click();
-//	}
+/*
+ * This test can only collect the first row from .xlsx
+ * does not have ways to iterate
+ * see next file for the example of simple iteration
+ */
 
 	@Test
 	public void enterRegInfo() {
@@ -98,7 +65,5 @@ public class TestNG09DataProviderExpressTest extends TestBase {
 		System.out.println("clicked recaptcha");
 
 		driver.findElement(By.xpath("//button[@type='submit' and contains(text(),'Create Account')]")).click();
-
 	}
-
 }

@@ -3,7 +3,6 @@ package com.test.dataprovider;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.poi.ss.formula.functions.Count;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -11,10 +10,14 @@ import org.testng.annotations.Test;
 
 import com.util.Xls_Reader;
 
-public class TestNG10ParameterizedExpresssRegTest extends TestBase {
+public class TestNG11Parameterized2DExpresssRegTest extends TestBase {
 
 	@Test
 	public void validateCreateNewContact() {
+		
+/*
+ * This is an example of iteration with 2D ArrayList		
+ */
 
 		List<String> elementNames = new ArrayList<String>();
 		elementNames.add("loginName");
@@ -35,30 +38,39 @@ public class TestNG10ParameterizedExpresssRegTest extends TestBase {
 		// efficient
 
 		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
-			System.out.println("Row: " + rowNum);
+			System.out.println("=======================\n" + "Row: " + rowNum + "\n=======================");
 
 			for (int colNum = 0; colNum < colCount; colNum++) {
-				System.out.println("Column: " + colNum);
+				// System.out.println("Column: " + colNum);
 
+				//collect columns from .xlsx
 				String cellValue = reader.getCellData("RegTestData", colNum, rowNum);
-				System.out.println(colNum + " -> " + cellValue);
+				System.out.println("Column: " + colNum + " -> " + cellValue);
 
-				//collect elementNames and use to find Web Elements
+				// collect elementNames and use them to find Web Elements
 				WebElement regElement = driver.findElement(By.name(elementNames.get(colNum)));
 				System.out.println("RegElement is: " + elementNames.get(colNum));
 
-				//separate case for country (handle Select)
+				// separate case for country (handle Select)
 				if (elementNames.get(colNum).equalsIgnoreCase("country")) {
-					//System.out.println("Got Country");
-					//String userCountry = reader.getCellData("RegTestData",  "country", rowNum);
 					Select country = new Select(regElement);
 					country.selectByVisibleText(cellValue);
-				} else {
 
+				} else {
 					regElement.clear();
 					regElement.sendKeys(cellValue);
 				}
 			}
+			// deal with reCaptcha
+//			List<WebElement> isPresent = driver
+//					.findElements(By.xpath("//div[@class='recaptcha-checkbox-checkmark' and role='presentation']"));
+//			if (isPresent.size() > 0) {
+//				driver.findElement(By.xpath("//div[@class='recaptcha-checkbox-checkmark' and role='presentation']"))
+//						.click();
+//			}
+//			System.out.println("clicked recaptcha");
+//
+//			driver.findElement(By.xpath("//button[@type='submit' and contains(text(),'Create Account')]")).click();
 		}
 	}
 }
