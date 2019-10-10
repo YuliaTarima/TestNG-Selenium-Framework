@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import com.util.Xls_Reader;
 
-public class TestNG8DataProviderW3SchoolsTest extends TestBase{
+public class TestNG08DataProviderW3SchoolsTest extends TestBase{
 	
 
 	@Test

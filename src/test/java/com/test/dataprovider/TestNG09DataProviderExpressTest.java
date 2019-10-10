@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 
 import com.util.Xls_Reader;
 
-public class TestNG9DataProviderExpressTest extends TestBase {
+public class TestNG09DataProviderExpressTest extends TestBase {
 
 //		public static void main(String[] args) {
 //			

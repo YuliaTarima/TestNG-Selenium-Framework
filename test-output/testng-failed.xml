@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.dataprovider.TestNG9ParameterizedExpresssRegTest">
+      <class name="com.test.dataprovider.TestNG11ParameterizedArrayExpressTest">
         <methods>
           <include name="setUp"/>
-          <include name="enterRegInfo"/>
+          <include name="validateCreateNewContact"/>
         </methods>
-      </class> <!-- com.test.dataprovider.TestNG9ParameterizedExpresssRegTest -->
+      </class> <!-- com.test.dataprovider.TestNG11ParameterizedArrayExpressTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
