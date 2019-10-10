@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16952" started-at="2019-10-10T13:59:02 PDT" finished-at="2019-10-10T13:59:19 PDT">
+  <suite name="Default suite" duration-ms="16408" started-at="2019-10-10T15:58:21 PDT" finished-at="2019-10-10T15:58:37 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16952" started-at="2019-10-10T13:59:02 PDT" finished-at="2019-10-10T13:59:19 PDT">
+    <test name="Default test" duration-ms="16408" started-at="2019-10-10T15:58:21 PDT" finished-at="2019-10-10T15:58:37 PDT">
       <class name="com.test.dataprovider.TestNG10Parameterized1DExpressRegTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.dataprovider.TestNG10Parameterized1DExpressRegTest@4493d195]" name="setUp" is-config="true" duration-ms="11476" started-at="2019-10-10T13:59:02 PDT" finished-at="2019-10-10T13:59:13 PDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.dataprovider.TestNG10Parameterized1DExpressRegTest@4493d195]" name="setUp" is-config="true" duration-ms="11611" started-at="2019-10-10T15:58:21 PDT" finished-at="2019-10-10T15:58:32 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateCreateNewContact()[pri:0, instance:com.test.dataprovider.TestNG10Parameterized1DExpressRegTest@4493d195]" name="validateCreateNewContact" duration-ms="5432" started-at="2019-10-10T13:59:13 PDT" finished-at="2019-10-10T13:59:19 PDT">
+        <test-method status="PASS" signature="validateCreateNewContact()[pri:0, instance:com.test.dataprovider.TestNG10Parameterized1DExpressRegTest@4493d195]" name="validateCreateNewContact" duration-ms="4756" started-at="2019-10-10T15:58:32 PDT" finished-at="2019-10-10T15:58:37 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCreateNewContact -->
