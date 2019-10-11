@@ -45,7 +45,7 @@ public class TestNG11Parameterized2DExpresssRegTest extends TestBase {
 
 				//collect columns from .xlsx
 				String cellValue = reader.getCellData("RegTestData", colNum, rowNum);
-				System.out.println("Column: " + colNum + " -> " + cellValue);
+				System.out.println("Column (ColNum): " + colNum + " -> cellValue: " + cellValue);
 
 				// collect elementNames and use them to find Web Elements
 				WebElement regElement = driver.findElement(By.name(elementNames.get(colNum)));

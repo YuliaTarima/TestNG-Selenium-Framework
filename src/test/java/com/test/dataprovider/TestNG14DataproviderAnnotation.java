@@ -20,7 +20,7 @@ public class TestNG14DataproviderAnnotation extends TestBase {
 	}
 
 	@Test(dataProvider = "getTestData")
-	public void ExpressRegPageTest(String eMail, String firstName, String lastName, String passWord,
+	public void expressRegPageTest(String eMail, String firstName, String lastName, String passWord,
 			String userCountry) {
 
 		// findBy column values
