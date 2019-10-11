@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.dataprovider.TestNG11ParameterizedArrayExpressTest">
+      <class name="com.test.dataprovider.TestNG14DataproviderAnnotation">
         <methods>
           <include name="setUp"/>
-          <include name="validateCreateNewContact"/>
+          <include name="tearDown"/>
+          <include name="ExpressRegPageTest"/>
         </methods>
-      </class> <!-- com.test.dataprovider.TestNG11ParameterizedArrayExpressTest -->
+      </class> <!-- com.test.dataprovider.TestNG14DataproviderAnnotation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

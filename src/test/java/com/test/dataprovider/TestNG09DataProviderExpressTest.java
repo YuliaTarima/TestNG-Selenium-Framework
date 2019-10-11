@@ -25,7 +25,7 @@ public class TestNG09DataProviderExpressTest extends TestBase {
  */
 
 	@Test
-	public void enterRegInfo() {
+	public void ExpressRegPageTest() {
 
 		Xls_Reader reader = new Xls_Reader(
 				System.getProperty("user.dir") + "/src/main/java/com/testdata/RegistrationTestdata.xlsx");
