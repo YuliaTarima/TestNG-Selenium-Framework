@@ -5,14 +5,18 @@ import java.util.List;
 
 import com.util.Xls_Reader;
 
-public class MyDataProviderUtil {
+/*
+ * Dynamically collects all rows and columns in ArrayList<Object[]>
+ */
+
+public class MyDataProviderUtil1 {
 	static Xls_Reader reader;
 	
 
-	public static List<List<String>> getExcelData() {
+	public static ArrayList<Object[]> getExcelData() {
 		
 		//get all xcel Data
-        List<List<String>> xcelData = new ArrayList<>();
+        ArrayList<Object[]> xcelData = new ArrayList<>();
 		//ArrayList<Object[]> xcelData = new ArrayList<>();
 
         //set up xcel Reader
@@ -47,12 +51,16 @@ public class MyDataProviderUtil {
 			}
 			//xcelData.add(cols);
 			//System.out.println("============================================\n" + "Array Rows: " + xcelData);
-			xcelData.add(rowContents);
+			
+			//add column values into object
+			Object rowContentsObj[] = rowContents.toArray();
+//			myData.add(rowContents);
+//			System.out.println("rowContents: " + eMail+", "+firstName+", "+lastName+", "+passWord+", "+userCountry);
+			xcelData.add(rowContentsObj);
 			System.out.println("============================================\n" + "Array Rows: " + xcelData);
 		}
 		// String eMail = xcelData.get(0)
 		// firstName, lastName, passWord, userCountry
 		return xcelData;
-		//return xcelData.toArray(new Object[xcelData.size()]);
 	}
 }

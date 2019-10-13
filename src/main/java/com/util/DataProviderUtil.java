@@ -33,10 +33,13 @@ public class DataProviderUtil {
 			String userCountry = reader.getCellData("RegTestData", "country", rowNum);
 
 			//add column values into object
-			Object colValues[] = {eMail, firstName, lastName, passWord, userCountry};
-			myData.add(colValues);
+			Object rowContents[] = {eMail, firstName, lastName, passWord, userCountry};
+			myData.add(rowContents);
+			System.out.println("rowContents: " + eMail+", "+firstName+", "+lastName+", "+passWord+", "+userCountry);
+
 			// }
 		}
+		System.out.println("MyData: "+myData);
 		return myData;
 	}
 }

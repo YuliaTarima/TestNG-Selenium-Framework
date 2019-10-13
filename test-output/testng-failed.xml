@@ -6,8 +6,8 @@
       <class name="com.test.dataprovider.TestNG12MyDataProviderAnnotation">
         <methods>
           <include name="setUp"/>
-          <include name="ExpressRegPageTest"/>
           <include name="tearDown"/>
+          <include name="expressRegPageTest"/>
         </methods>
       </class> <!-- com.test.dataprovider.TestNG12MyDataProviderAnnotation -->
     </classes>
