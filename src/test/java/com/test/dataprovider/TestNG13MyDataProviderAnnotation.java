@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import com.util.MyDataProviderUtil1;
 
-public class TestNG12MyDataProviderAnnotation extends TestBase {
+public class TestNG13MyDataProviderAnnotation extends TestBase {
 
 	@DataProvider
 	public Iterator<Object[]> getTestData() {

@@ -8,19 +8,19 @@
       <![CDATA[Browser Session End]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20836" started-at="2019-10-14T12:45:13 PDT" finished-at="2019-10-14T12:45:34 PDT">
+  <suite name="Default suite" duration-ms="21832" started-at="2019-10-14T12:53:55 PDT" finished-at="2019-10-14T12:54:17 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20836" started-at="2019-10-14T12:45:13 PDT" finished-at="2019-10-14T12:45:34 PDT">
+    <test name="Default test" duration-ms="21832" started-at="2019-10-14T12:53:55 PDT" finished-at="2019-10-14T12:54:17 PDT">
       <class name="com.test.dataprovider.TestNG13MyDataProviderIterators">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="setUp" is-config="true" duration-ms="15829" started-at="2019-10-14T12:45:13 PDT" finished-at="2019-10-14T12:45:29 PDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="setUp" is-config="true" duration-ms="16568" started-at="2019-10-14T12:53:55 PDT" finished-at="2019-10-14T12:54:12 PDT">
           <reporter-output>
             <line>
               <![CDATA[Application is set up successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1083" started-at="2019-10-14T12:45:29 PDT" data-provider="getTestData" finished-at="2019-10-14T12:45:30 PDT">
+        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1207" started-at="2019-10-14T12:54:13 PDT" data-provider="getTestData" finished-at="2019-10-14T12:54:14 PDT">
           <params>
             <param index="0">
               <value>
@@ -51,7 +51,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- expressRegPageTest -->
-        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1093" started-at="2019-10-14T12:45:30 PDT" data-provider="getTestData" finished-at="2019-10-14T12:45:31 PDT">
+        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1038" started-at="2019-10-14T12:54:14 PDT" data-provider="getTestData" finished-at="2019-10-14T12:54:15 PDT">
           <params>
             <param index="0">
               <value>
@@ -82,7 +82,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- expressRegPageTest -->
-        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1382" started-at="2019-10-14T12:45:31 PDT" data-provider="getTestData" finished-at="2019-10-14T12:45:33 PDT">
+        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1417" started-at="2019-10-14T12:54:15 PDT" data-provider="getTestData" finished-at="2019-10-14T12:54:16 PDT">
           <params>
             <param index="0">
               <value>
@@ -113,7 +113,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- expressRegPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="tearDown" is-config="true" duration-ms="758" started-at="2019-10-14T12:45:33 PDT" finished-at="2019-10-14T12:45:34 PDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="tearDown" is-config="true" duration-ms="751" started-at="2019-10-14T12:54:16 PDT" finished-at="2019-10-14T12:54:17 PDT">
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>

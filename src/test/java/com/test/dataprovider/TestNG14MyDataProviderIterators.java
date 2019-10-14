@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import com.util.MyDataProviderUtil1;
 
-public class TestNG13MyDataProviderIterators extends TestBase {
+public class TestNG14MyDataProviderIterators extends TestBase {
 
 	@DataProvider
 	public Iterator<Object[]> getTestData() {
@@ -23,6 +23,10 @@ public class TestNG13MyDataProviderIterators extends TestBase {
 	@Test(dataProvider = "getTestData")
 	public void expressRegPageTest(String eMail, String firstName, String lastName, String passWord,
 			String userCountry) {
+		
+		System.out.println("\n============================\n");
+		System.out.println("@TEST DATA");
+		System.out.println("\n============================\n");
 
 		// collect web element names
 		List<String> webElementNames = new ArrayList<String>();

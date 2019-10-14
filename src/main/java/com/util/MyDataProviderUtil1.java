@@ -13,15 +13,16 @@ import com.util.Xls_Reader;
 
 public class MyDataProviderUtil1 {
 	static Xls_Reader reader;
-	
 
 	public static ArrayList<Object[]> getExcelData() {
-		
-		//get all xcel Data
-        ArrayList<Object[]> xcelData = new ArrayList<>();
-		//ArrayList<Object[]> xcelData = new ArrayList<>();
+		System.out.println("\n============================\n");
+		System.out.println("EXCEL DATA");
+		System.out.println("\n============================\n");
 
-        //set up xcel Reader
+		// get all xcel Data
+		ArrayList<Object[]> xcelData = new ArrayList<>();
+
+		// set up xcel Reader
 		try {
 			reader = new Xls_Reader(
 					System.getProperty("user.dir") + "/src/main/java/com/testdata/ExpressRegistrationTestdata1.xlsx");
@@ -29,37 +30,37 @@ public class MyDataProviderUtil1 {
 			e.printStackTrace();
 		}
 
-		//get rows
+		// get rows
 		int rowCount = reader.getRowCount("RegTestData");
 		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
 			System.out.println("============================================\n" + "Row: " + rowNum
 					+ "\n============================================");
 			List<String> rowContents = new ArrayList<>();
-			//get column values
+			// get column values
 			int colCount = reader.getColumnCount("RegTestData");
-			//List<String> cols = new ArrayList<>();
-			//ArrayList<String> cols = new ArrayList<String>();
+			// List<String> cols = new ArrayList<>();
+			// ArrayList<String> cols = new ArrayList<String>();
 			for (int colNum = 0; colNum < colCount; colNum++) {
 				// System.out.println("Column: " + colNum);
 
 				String cellValue = reader.getCellData("RegTestData", colNum, rowNum);
 				System.out.println("Column String: " + colNum + " -> " + cellValue);
-				//cols.add(cellValue);
-				//System.out.println("Array Cols: " + cols);
-				
-				//add cellValues to Object array
-				//Object rowContents[] = new Object[] {};
+				// cols.add(cellValue);
+				// System.out.println("Array Cols: " + cols);
+
+				// add cellValues to Object array
+				// Object rowContents[] = new Object[] {};
 				rowContents.add(cellValue);
 			}
-			//xcelData.add(cols);
-			//System.out.println("============================================\n" + "Array Rows: " + xcelData);
-			
-			//add column values into object
+			// xcelData.add(cols);
+			// System.out.println("============================================\n" + "Array
+			// Rows: " + xcelData);
+
+			// add column values into object
 			Object rowContentsObj[] = rowContents.toArray();
 //			myData.add(rowContents);
 //			System.out.println("rowContents: " + eMail+", "+firstName+", "+lastName+", "+passWord+", "+userCountry);
 			xcelData.add(rowContentsObj);
-			System.out.println("============================================\n" + "Array Rows: " + xcelData);
 		}
 		// String eMail = xcelData.get(0)
 		// firstName, lastName, passWord, userCountry

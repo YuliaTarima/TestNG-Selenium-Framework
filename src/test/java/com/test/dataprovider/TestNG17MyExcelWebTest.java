@@ -1,107 +1,84 @@
 package com.test.dataprovider;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-import com.util.DataProviderUtil;
 import com.util.Xls_Reader;
 
-
-public class TestNG17MyExcelWebTest extends TestBase{
+public class TestNG17MyExcelWebTest extends TestBase {
 	static Xls_Reader reader;
 	static List<String> webElementNames;
-	
-    public static void main(String[] args) throws Exception {
+
+	public static void main(String[] args) throws Exception {
 
 //get a list of web elements on a page   
-    	webElementNames = new ArrayList<>();
-    	webElementNames.add("loginName");
-    	webElementNames.add("firstname");
-    	webElementNames.add("lastname");
-    	webElementNames.add("password");
-    	webElementNames.add("country");
-    	
- //set up reader   	
- 		try {
+		webElementNames = new ArrayList<>();
+		webElementNames.add("loginName");
+		webElementNames.add("firstname");
+		webElementNames.add("lastname");
+		webElementNames.add("password");
+		webElementNames.add("country");
+
+		// set up reader
+		try {
 			reader = new Xls_Reader(
 					System.getProperty("user.dir") + "/src/main/java/com/testdata/ExpressRegistrationTestdata1.xlsx");
 		} catch (Exception e) {
 			e.printStackTrace();
-		}		
+		}
 		int rowCount = reader.getRowCount("RegTestData");
 		int colCount = reader.getColumnCount("RegTestData");
 		// System.out.println(rowCount + " | " + colCount);
-		
+
 //get all xcel Data
-        List<List<String>> values = new ArrayList<>();
-        
- //collect rows
-        List<String> rows = new ArrayList<>();        
+		List<List<List<String>>> xcelTable = new ArrayList<>();
+
+		// collect rows
+		List<List<String>> rows = new ArrayList<>();
 		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
-			System.out.println("============================================\n" + "Row: " + rowNum
-					+ "\n============================================");
-
-//collect columns			
-			List<String> cols = new ArrayList<>(); ;
-			//for (String colName : cols) {
-			for (int colName = 0; colName < colCount; colName++) {
-				// System.out.println("Column: " + colName);
-
-				String cellValue = reader.getCellData("RegTestData", colName, rowNum);
-				System.out.println("Column: " + colName + " -> " + cellValue);
+			System.out.println("=========================\n" + "Row: " + rowNum + "\n========================");
+			// collect columns values and add to cols
+			List<String> cols = new ArrayList<>();
+			for (int colNum = 0; colNum < colCount; colNum++) {
+				String cellValue = reader.getCellData("RegTestData", colNum, rowNum);
+				System.out.println("Column: " + colNum + " -> cellValue: " + cellValue);
 				cols.add(cellValue);
 
-				System.out.println("Array Cols: " + cols);
-				rows.add(cellValue);
 			}
+			rows.add(cols);
+			System.out.println("===================\n" + "Cols: " + cols + "\n");
+		}
 
-			values.add(rows);	
-			System.out.println("============================================\n" + "Values: " + values);
+		xcelTable.add(rows);
+		System.out.println("===================\n" + "Rows: " + rows + "\n");
+		process(webElementNames, xcelTable);
+	}
 
-		}		process(webElementNames, values);
-   
-    }
+	private static void process(List<String> webElementNames, List<List<List<String>>> values) {
+		values.forEach(allRows -> processRow(webElementNames, allRows));
+	}
 
-   private static void process(List<String> webElementNames, List<List<String>> values) {
-       values.forEach(rowValues -> processRow(webElementNames, rowValues));
-   }
+	private static void processRow(List<String> webElementNames, List<List<String>> allRows) {
+		Iterator<List<String>> allRowsIt = allRows.iterator();
+		while (allRowsIt.hasNext()) {
+			List<String> webElementValues = allRowsIt.next();
+			processCell(webElementNames, webElementValues);
+		}
+		System.out.println("Row processed (rowValuesList): " + allRows);
+	}
 
-   private static void processRow(List<String> webElementNames, List<String> rowValues) {
-       Iterator<String> webElementNamesIt = webElementNames.iterator();
-       Iterator<String> rowValuesIt = rowValues.iterator();
-       while (webElementNamesIt.hasNext() && rowValuesIt.hasNext()) {
-           String webElementName = webElementNamesIt.next();
-           String value = rowValuesIt.next();
-           processCell(webElementName, value);
-       }
-       System.out.println("Row processed: " + rowValues);
-   }
-   
-   //set values into web elements here
-   private static void processCell(String webElementName, String value) {
-       System.out.println("Set webElementName '" + webElementName + "' to value '" + value + "'");
-       
-       // collect elementNames and use them to find Web Elements
-  		WebElement regElement = driver.findElement(By.name(webElementName));
-  		System.out.println("found regElement " + webElementName);
-  		
-//		// separate case for country (handle Select)
-//		if (webElementName.equalsIgnoreCase("country")) {
-//			Select country = new Select(regElement);
-//			country.selectByVisibleText(webElementValue);
-///		} else {
-//			regElement.clear();
-//			regElement.sendKeys(webElementValue);
-//		}
-   }
-
-        
-    }
+	// set values into web elements here
+	private static void processCell(List<String> webElementNames, List<String> webElementValues) {
+		Iterator<String> webElementNamesIt = webElementNames.iterator();
+		Iterator<String> webElementValueIt = webElementValues.iterator();
+		String webElValue;
+		while (webElementNamesIt.hasNext() && webElementValueIt.hasNext()) {
+			String webElementName = webElementNamesIt.next();
+			webElValue = webElementValueIt.next();
+			System.out.println("\n+++++++++++++++++++++++++++++++++++++++\n");
+			System.out.println("Inside while: " + webElementName + " -> " + webElValue);
+			System.out.println("Set webElementName '" + webElementName + "' to value '" + webElValue + "'");
+		}
+	}
+}
