@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import com.util.Xls_Reader;
 
-public class TestNG13WriteIntoXcellTest extends TestBase {
+public class TestNG14WriteIntoXcellTest extends TestBase {
 
 	/*
 	 * Simple 1D iteration example for .xlsx rows 

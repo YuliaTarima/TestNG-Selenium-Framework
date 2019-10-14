@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.dataprovider.TestNG12MyDataProviderAnnotation">
+      <class name="com.test.dataprovider.TestNG13MyDataProviderIterators">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="expressRegPageTest"/>
+          <include name="expressRegPageTest" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- com.test.dataprovider.TestNG12MyDataProviderAnnotation -->
+      </class> <!-- com.test.dataprovider.TestNG13MyDataProviderIterators -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

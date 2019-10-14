@@ -10,7 +10,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import com.util.TestUtil;
@@ -20,7 +22,8 @@ public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 	
-    @BeforeMethod
+//    @BeforeMethod
+	@BeforeClass
     public void setUp() {
 		// set up properties file
 		try {
@@ -55,7 +58,8 @@ public class TestBase {
 		Reporter.log("Application is set up successfully");
 	}
 
-	@AfterMethod
+//	@AfterMethod
+    @AfterClass
 	public void tearDown() {
 		driver.quit();
 		Reporter.log("Browser Session End");

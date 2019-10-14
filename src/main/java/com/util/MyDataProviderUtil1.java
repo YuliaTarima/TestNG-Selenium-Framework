@@ -7,6 +7,8 @@ import com.util.Xls_Reader;
 
 /*
  * Dynamically collects all rows and columns in ArrayList<Object[]>
+ * list this method as data provider
+ * and add the needed amount of parameters to the test method
  */
 
 public class MyDataProviderUtil1 {

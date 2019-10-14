@@ -15,7 +15,7 @@ import com.util.DataProviderUtil;
 import com.util.Xls_Reader;
 
 
-public class TestNG16MyExcelWebTest extends TestBase{
+public class TestNG17MyExcelWebTest extends TestBase{
 	static Xls_Reader reader;
 	static List<String> webElementNames;
 	

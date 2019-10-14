@@ -3,7 +3,6 @@ package com.test.dataprovider;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.ListIterator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,27 +10,19 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.util.DataProviderUtil;
-import com.util.MyDataProviderUtil;
 import com.util.MyDataProviderUtil1;
-import com.util.Xls_Reader;
 
 public class TestNG12MyDataProviderAnnotation extends TestBase {
 
-
 	@DataProvider
 	public Iterator<Object[]> getTestData() {
-
 		ArrayList<Object[]> testData = MyDataProviderUtil1.getExcelData();
-			return testData.iterator();
+		return testData.iterator();
 	}
 
 	@Test(dataProvider = "getTestData")
 	public void expressRegPageTest(String eMail, String firstName, String lastName, String passWord,
 			String userCountry) {
-
-		// public void ExpressRegPageTest(String data) {
-		// System.out.println("getTestData: " + " -> " + data);
 
 		List<String> elementNames = new ArrayList<String>();
 		elementNames.add("loginName");
@@ -40,43 +31,68 @@ public class TestNG12MyDataProviderAnnotation extends TestBase {
 		elementNames.add("password");
 		elementNames.add("country");
 
-		// collect elementNames and use them to find Web Elements
-//				WebElement regElement = driver.findElement(By.name(elementNames.get(colNum)));
-//				
+		// Iterator to traverse the list elementNames
+		Iterator<String> elementsIterator = elementNames.iterator();
+
+		// match elementsIterator to xcel data
+		while (elementsIterator.hasNext() ) {
+
+			// get element name
+			String elementName = elementsIterator.next();
+			WebElement regElement = driver.findElement(By.name(elementName));
+			System.out.print("RegElemnt " + elementName + " found = " + regElement);
+			System.out.println();
+
+			String elementValue;
+		
+			switch (elementName) {
+			case "country":
+				elementValue = userCountry;
+				Select country = new Select(regElement);
+				country.selectByVisibleText(elementValue);
+				break;
+			case "loginName":
+				elementValue = eMail;
+				regElement.clear();
+				regElement.sendKeys(elementValue);
+				break;
+			case "firstname":
+				elementValue = firstName;
+				regElement.clear();
+				regElement.sendKeys(elementValue);
+				break;
+			case "lastname":
+				elementValue = lastName;	
+				regElement.clear();
+				regElement.sendKeys(elementValue);
+				break;
+			case "password":
+				elementValue = passWord;		
+				regElement.clear();
+				regElement.sendKeys(elementValue);
+				break;
+			}
+			
+
+//           //collect returned xcel data values in correct vars
+//			if (elementName.equalsIgnoreCase("loginName")) {
+//				regElement.clear();
+//				regElement.sendKeys(eMail);
+//			} else if (elementName.equalsIgnoreCase("firstname")) {
+//					regElement.clear();
+//					regElement.sendKeys(firstName);
+//			} else if (elementName.equalsIgnoreCase("lastname")) {
+//				regElement.clear();
+//				regElement.sendKeys(lastName);
+//			} else if (elementName.equalsIgnoreCase("password")) {
+//				regElement.clear();
+//				regElement.sendKeys(passWord);
 //
 //				// separate case for country (handle Select)
-//				if (elementNames.get(colNum).equalsIgnoreCase("country")) {
-//					Select country = new Select(regElement);
-//					country.selectByVisibleText(getTestData());
-//
-//				} else {
-//					regElement.clear();
-//					regElement.sendKeys(cellValue);
-//				}
-		
-		// findBy column values
-		WebElement loginName = driver.findElement(By.name("loginName"));
-		System.out.println(eMail);
-		loginName.clear();
-		loginName.sendKeys(eMail);
-
-		WebElement fname = driver.findElement(By.name("firstname"));
-		System.out.println(firstName);
-		fname.clear();
-		fname.sendKeys(firstName);
-
-		WebElement lname = driver.findElement(By.name("lastname"));
-		System.out.println(lastName);
-		lname.clear();
-		lname.sendKeys(lastName);
-
-		WebElement password = driver.findElement(By.name("password"));
-		System.out.println(passWord);
-		password.clear();
-		password.sendKeys(passWord);
-
-		Select country = new Select(driver.findElement(By.name("country")));
-		System.out.println(userCountry);
-		country.selectByVisibleText(userCountry);
+//			} else if (elementName.equalsIgnoreCase("country")) {
+//				Select country = new Select(regElement);
+//				country.selectByVisibleText(userCountry);
+//			}
+		}
 	}
 }
