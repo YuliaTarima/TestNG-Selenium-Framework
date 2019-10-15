@@ -9,6 +9,11 @@ import com.util.Xls_Reader;
 public class TestNG17MyExcelWebTest extends TestBase {
 	static Xls_Reader reader;
 	static List<String> webElementNames;
+/*
+ * Collects web elements into list
+ * Collects web element values from excel
+ * Matches values to names through Iterators
+ */
 
 	public static void main(String[] args) throws Exception {
 

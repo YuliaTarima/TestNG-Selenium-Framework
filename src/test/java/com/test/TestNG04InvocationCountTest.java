@@ -2,7 +2,7 @@ package com.test;
 
 import org.testng.annotations.Test;
 
-public class TestNG4InvocationCountTest {
+public class TestNG04InvocationCountTest {
 	
 	
 	//execute this test 10 times

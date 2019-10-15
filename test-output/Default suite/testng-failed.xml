@@ -3,13 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.dataprovider.TestNG13MyDataProviderIterators">
+      <class name="com.test.TestNG18WriteWebTableIntoXcel">
         <methods>
+          <include name="writeWholeTableIntoXcelTest"/>
           <include name="setUp"/>
+          <include name="writeCountryColumnIntoXcelTest"/>
           <include name="tearDown"/>
-          <include name="expressRegPageTest" invocation-numbers="0 1 2"/>
+          <include name="setUpReader"/>
+          <include name="writeCompanyColumnIntoXcelTest"/>
+          <include name="writeContactColumnIntoXcelTest"/>
         </methods>
-      </class> <!-- com.test.dataprovider.TestNG13MyDataProviderIterators -->
+      </class> <!-- com.test.TestNG18WriteWebTableIntoXcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,7 +2,7 @@ package com.test;
 
 import org.testng.annotations.Test;
 
-public class TestNG5ExceptionTimeoutExpectedException {
+public class TestNG05ExceptionTimeoutExpectedException {
 	
 //	@Test(invocationTimeOut = 1000)// max execution time
 //	public void infiniteLoopTest() {

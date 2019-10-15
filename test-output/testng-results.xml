@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
     <line>
       <![CDATA[Application is set up successfully]]>
@@ -8,119 +8,46 @@
       <![CDATA[Browser Session End]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21832" started-at="2019-10-14T12:53:55 PDT" finished-at="2019-10-14T12:54:17 PDT">
+  <suite name="Default suite" duration-ms="20403" started-at="2019-10-15T12:26:17 PDT" finished-at="2019-10-15T12:26:37 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21832" started-at="2019-10-14T12:53:55 PDT" finished-at="2019-10-14T12:54:17 PDT">
-      <class name="com.test.dataprovider.TestNG13MyDataProviderIterators">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="setUp" is-config="true" duration-ms="16568" started-at="2019-10-14T12:53:55 PDT" finished-at="2019-10-14T12:54:12 PDT">
+    <test name="Default test" duration-ms="20403" started-at="2019-10-15T12:26:17 PDT" finished-at="2019-10-15T12:26:37 PDT">
+      <class name="com.test.TestNG18WriteWebTableIntoXcel">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="setUp" is-config="true" duration-ms="9333" started-at="2019-10-15T12:26:17 PDT" finished-at="2019-10-15T12:26:26 PDT">
           <reporter-output>
             <line>
               <![CDATA[Application is set up successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1207" started-at="2019-10-14T12:54:13 PDT" data-provider="getTestData" finished-at="2019-10-14T12:54:14 PDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[shakespeare@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Romeo]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Juliet]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Younglove]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[United Kingdom]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="setUpXcelReader()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="setUpXcelReader" is-config="true" duration-ms="1125" started-at="2019-10-15T12:26:26 PDT" finished-at="2019-10-15T12:26:27 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- expressRegPageTest -->
-        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1038" started-at="2019-10-14T12:54:14 PDT" data-provider="getTestData" finished-at="2019-10-14T12:54:15 PDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[creapypainting@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Dorian]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Gray]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Foreveryoung]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Ireland]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setUpXcelReader -->
+        <test-method status="PASS" signature="writeCompanyColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeCompanyColumnIntoXcelTest" duration-ms="931" started-at="2019-10-15T12:26:27 PDT" finished-at="2019-10-15T12:26:28 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- expressRegPageTest -->
-        <test-method status="PASS" signature="expressRegPageTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="expressRegPageTest" duration-ms="1417" started-at="2019-10-14T12:54:15 PDT" data-provider="getTestData" finished-at="2019-10-14T12:54:16 PDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[goodness@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Alesha]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Karamazov]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[WarWorld]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Colombia]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- writeCompanyColumnIntoXcelTest -->
+        <test-method status="PASS" signature="writeContactColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeContactColumnIntoXcelTest" duration-ms="903" started-at="2019-10-15T12:26:28 PDT" finished-at="2019-10-15T12:26:29 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- expressRegPageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.dataprovider.TestNG13MyDataProviderIterators@4232c52b]" name="tearDown" is-config="true" duration-ms="751" started-at="2019-10-14T12:54:16 PDT" finished-at="2019-10-14T12:54:17 PDT">
+        </test-method> <!-- writeContactColumnIntoXcelTest -->
+        <test-method status="PASS" signature="writeCountryColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeCountryColumnIntoXcelTest" duration-ms="1268" started-at="2019-10-15T12:26:29 PDT" finished-at="2019-10-15T12:26:31 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeCountryColumnIntoXcelTest -->
+        <test-method status="PASS" signature="writeWholeTableIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeWholeTableIntoXcelTest" duration-ms="3257" started-at="2019-10-15T12:26:31 PDT" finished-at="2019-10-15T12:26:34 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeWholeTableIntoXcelTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="tearDown" is-config="true" duration-ms="3529" started-at="2019-10-15T12:26:34 PDT" finished-at="2019-10-15T12:26:37 PDT">
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.test.dataprovider.TestNG13MyDataProviderIterators -->
+      </class> <!-- com.test.TestNG18WriteWebTableIntoXcel -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

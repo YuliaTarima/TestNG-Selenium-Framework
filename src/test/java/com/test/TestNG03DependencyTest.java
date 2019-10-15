@@ -2,7 +2,7 @@ package com.test;
 
 import org.testng.annotations.Test;
 
-public class TestNG3DependencyTest {
+public class TestNG03DependencyTest {
 	
 	@Test
 	public void loginTest() {

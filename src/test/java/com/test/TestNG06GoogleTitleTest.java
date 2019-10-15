@@ -3,10 +3,13 @@ package com.test;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.base.TestBase;
 
-public class TestNG6GoogleTitleTest extends TestBase{
+/*
+ * for this to work go to for this to work, go to config.properties 
+ * and change url to https://www.google.com/
+ */
+public class TestNG06GoogleTitleTest extends TestBase{
 	
 	@Test (priority=1, groups="Title")
 	public void googleTitleTest() {

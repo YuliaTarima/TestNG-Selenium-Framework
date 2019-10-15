@@ -16,15 +16,16 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import com.util.TestUtil;
+import com.util.Xls_Reader;
 
 public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	
+
 //    @BeforeMethod
 	@BeforeClass
-    public void setUp() {
+	public void setUp() {
 		// set up properties file
 		try {
 			prop = new Properties();
@@ -54,12 +55,12 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 
 		driver.get(prop.getProperty("url"));
-		
+
 		Reporter.log("Application is set up successfully");
 	}
 
 //	@AfterMethod
-    @AfterClass
+	@AfterClass
 	public void tearDown() {
 		driver.quit();
 		Reporter.log("Browser Session End");

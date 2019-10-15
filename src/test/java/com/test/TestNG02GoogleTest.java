@@ -6,8 +6,11 @@ import org.testng.annotations.Test;
 
 import com.base.TestBase;
 
-public class TestNG2GoogleTest extends TestBase{
-
+public class TestNG02GoogleTest extends TestBase{
+/*
+ * for this to work go to for this to work, go to config.properties 
+ * and change url to https://www.google.com/
+ */
 	
 	@Test (priority=1, groups="Title")
 	public void googleTitleTest() {
