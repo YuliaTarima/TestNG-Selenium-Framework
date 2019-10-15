@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
     <line>
       <![CDATA[Application is set up successfully]]>
@@ -8,39 +8,43 @@
       <![CDATA[Browser Session End]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20403" started-at="2019-10-15T12:26:17 PDT" finished-at="2019-10-15T12:26:37 PDT">
+  <suite name="Default suite" duration-ms="21125" started-at="2019-10-15T13:02:29 PDT" finished-at="2019-10-15T13:02:51 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20403" started-at="2019-10-15T12:26:17 PDT" finished-at="2019-10-15T12:26:37 PDT">
+    <test name="Default test" duration-ms="21125" started-at="2019-10-15T13:02:29 PDT" finished-at="2019-10-15T13:02:51 PDT">
       <class name="com.test.TestNG18WriteWebTableIntoXcel">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="setUp" is-config="true" duration-ms="9333" started-at="2019-10-15T12:26:17 PDT" finished-at="2019-10-15T12:26:26 PDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="setUp" is-config="true" duration-ms="9353" started-at="2019-10-15T13:02:29 PDT" finished-at="2019-10-15T13:02:39 PDT">
           <reporter-output>
             <line>
               <![CDATA[Application is set up successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUpXcelReader()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="setUpXcelReader" is-config="true" duration-ms="1125" started-at="2019-10-15T12:26:26 PDT" finished-at="2019-10-15T12:26:27 PDT">
+        <test-method status="PASS" signature="setUpXcelReader()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="setUpXcelReader" is-config="true" duration-ms="974" started-at="2019-10-15T13:02:39 PDT" finished-at="2019-10-15T13:02:40 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpXcelReader -->
-        <test-method status="PASS" signature="writeCompanyColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeCompanyColumnIntoXcelTest" duration-ms="931" started-at="2019-10-15T12:26:27 PDT" finished-at="2019-10-15T12:26:28 PDT">
+        <test-method status="PASS" signature="writeCompanyColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeCompanyColumnIntoXcelTest" duration-ms="998" started-at="2019-10-15T13:02:40 PDT" finished-at="2019-10-15T13:02:41 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeCompanyColumnIntoXcelTest -->
-        <test-method status="PASS" signature="writeContactColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeContactColumnIntoXcelTest" duration-ms="903" started-at="2019-10-15T12:26:28 PDT" finished-at="2019-10-15T12:26:29 PDT">
+        <test-method status="PASS" signature="writeContactColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeContactColumnIntoXcelTest" duration-ms="647" started-at="2019-10-15T13:02:41 PDT" finished-at="2019-10-15T13:02:41 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeContactColumnIntoXcelTest -->
-        <test-method status="PASS" signature="writeCountryColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeCountryColumnIntoXcelTest" duration-ms="1268" started-at="2019-10-15T12:26:29 PDT" finished-at="2019-10-15T12:26:31 PDT">
+        <test-method status="PASS" signature="writeCountryColumnIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeCountryColumnIntoXcelTest" duration-ms="1491" started-at="2019-10-15T13:02:41 PDT" finished-at="2019-10-15T13:02:43 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeCountryColumnIntoXcelTest -->
-        <test-method status="PASS" signature="writeWholeTableIntoXcelTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeWholeTableIntoXcelTest" duration-ms="3257" started-at="2019-10-15T12:26:31 PDT" finished-at="2019-10-15T12:26:34 PDT">
+        <test-method status="PASS" signature="writeTableIntoXcelNestedForLoopTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeTableIntoXcelNestedForLoopTest" duration-ms="3503" started-at="2019-10-15T13:02:43 PDT" finished-at="2019-10-15T13:02:46 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- writeWholeTableIntoXcelTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="tearDown" is-config="true" duration-ms="3529" started-at="2019-10-15T12:26:34 PDT" finished-at="2019-10-15T12:26:37 PDT">
+        </test-method> <!-- writeTableIntoXcelNestedForLoopTest -->
+        <test-method status="PASS" signature="writeTableIntoXcelSingleForLoopTest()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="writeTableIntoXcelSingleForLoopTest" duration-ms="1030" started-at="2019-10-15T13:02:46 PDT" finished-at="2019-10-15T13:02:47 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeTableIntoXcelSingleForLoopTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.TestNG18WriteWebTableIntoXcel@305fd85d]" name="tearDown" is-config="true" duration-ms="3047" started-at="2019-10-15T13:02:47 PDT" finished-at="2019-10-15T13:02:51 PDT">
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>

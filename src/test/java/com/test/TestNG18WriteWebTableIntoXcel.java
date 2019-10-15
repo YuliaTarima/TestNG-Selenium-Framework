@@ -27,31 +27,32 @@ public class TestNG18WriteWebTableIntoXcel extends TestBase {
 
 	@BeforeClass
 	public void setUpXcelReader() throws IOException {
-		//set up xcel file
-		
+		// set up xcel file
+
 		String fileUrl = System.getProperty("user.dir") + "/src/main/java/com/testdata/WtriteWebTableIntoXcel.xlsx";
-		
-		File xcelFile = new File(fileUrl); 
-		if (!xcelFile.createNewFile()) { 
-			System.out.println("\n++++++++++\n"+"xcelFile already exists"+"\n++++++++++\n");
+
+		File xcelFile = new File(fileUrl);
+		if (!xcelFile.createNewFile()) {
+			System.out.println("\n++++++++++\n" + "xcelFile already exists" + "\n++++++++++\n");
 		} else {
-			System.out.println("\n++++++++++\n"+"New xcelFile created"+"\n++++++++++\n");
-			//solve this: org.apache.poi.EmptyFileException: The supplied file was empty (zero bytes long)
+			System.out.println("\n++++++++++\n" + "New xcelFile created" + "\n++++++++++\n");
+			// solve this: org.apache.poi.EmptyFileException: The supplied file was empty
+			// (zero bytes long)
 		}
-		
+
 		// set up xcel Reader
-			reader = new Xls_Reader(fileUrl);
+		reader = new Xls_Reader(fileUrl);
 	}
 
 	@Test
 	public void writeCompanyColumnIntoXcelTest() {
-		System.out.println("\n++++++++++++++++++++\n"+"writeCompanyColumnIntoXcelTest"+"\n++++++++++++++++++++\n");
-		
+		System.out.println("\n++++++++++++++++++++\n" + "writeCompanyColumnIntoXcelTest" + "\n++++++++++++++++++++\n");
+
 		// add sheet
 		if (!reader.isSheetExist("writeCompanyColumnIntoXcel")) {
 			reader.addSheet("writeCompanyColumnIntoXcel");
 		}
-		
+
 		// add column
 		reader.addColumn("writeCompanyColumnIntoXcel", "Company");
 
@@ -72,13 +73,13 @@ public class TestNG18WriteWebTableIntoXcel extends TestBase {
 
 	@Test
 	public void writeContactColumnIntoXcelTest() {
-		System.out.println("\n++++++++++++++++++++\n"+"writeContactColumnIntoXcelTest"+"\n++++++++++++++++++++\n");
-		
+		System.out.println("\n++++++++++++++++++++\n" + "writeContactColumnIntoXcelTest" + "\n++++++++++++++++++++\n");
+
 		// add sheet
 		if (!reader.isSheetExist("writeContactColumnIntoXcel")) {
 			reader.addSheet("writeContactColumnIntoXcel");
 		}
-		
+
 		// add column
 		reader.addColumn("writeContactColumnIntoXcel", "Contact");
 
@@ -98,13 +99,13 @@ public class TestNG18WriteWebTableIntoXcel extends TestBase {
 
 	@Test
 	public void writeCountryColumnIntoXcelTest() {
-		System.out.println("\n++++++++++++++++++++\n"+"writeCountryColumnIntoXcelTest"+"\n++++++++++++++++++++\n");
-		
+		System.out.println("\n++++++++++++++++++++\n" + "writeCountryColumnIntoXcelTest" + "\n++++++++++++++++++++\n");
+
 		// add sheet
 		if (!reader.isSheetExist("writeCountryColumnIntoXcel")) {
 			reader.addSheet("writeCountryColumnIntoXcel");
 		}
-		
+
 		// add column
 		reader.addColumn("writeCountryColumnIntoXcel", "Country");
 
@@ -123,18 +124,70 @@ public class TestNG18WriteWebTableIntoXcel extends TestBase {
 	}
 
 	@Test
-	public void writeWholeTableIntoXcelTest() {
-		System.out.println("\n++++++++++++++++++++\n"+"writeWholeTableIntoXcelTest"+"\n++++++++++++++++++++\n");
+	public void writeTableIntoXcelSingleForLoopTest() {
+		System.out.println(
+				"\n++++++++++++++++++++\n" + "writeTableIntoXcelSingleForLoopTest" + "\n++++++++++++++++++++\n");
 
 		// add sheet
-		if (!reader.isSheetExist("writeWholeTableIntoXcel")) {
-			reader.addSheet("writeWholeTableIntoXcel");
-			System.out.println("Creted new sheet writeWholeTableIntoXcel");
+		if (!reader.isSheetExist("writeWholeTableSingleFor")) {
+			reader.addSheet("writeWholeTableSingleFor");
+		}
+
+		// add columns
+		reader.addColumn("writeWholeTableSingleFor", "Company");
+		reader.addColumn("writeWholeTableSingleFor", "Contact");
+		reader.addColumn("writeWholeTableSingleFor", "Country");
+
+		List<WebElement> rows = driver.findElements(By.xpath("//table[@id='customers']//tr"));
+		int rowCount = rows.size();
+
+		String xpathStart = "//*[@id='customers']/tbody/tr[";
+		String xpathMiddle = "]/td[";
+		String xpathEnd = "]";
+
+		for (int rowNum = 2; rowNum <= rowCount; rowNum++) {
+			String tableCellValue;
+			
+			// read company data
+			String companyXpath = xpathStart + rowNum + xpathMiddle + "1" + xpathEnd;
+			String companyName = driver.findElement(By.xpath(companyXpath)).getText();
+			tableCellValue = driver.findElement(By.xpath(companyXpath)).getText();
+			// write company data
+			reader.setCellData("writeWholeTableSingleFor", "Company", rowNum, companyName);
+			System.out.println("===================\n" + rowNum + " -> " + tableCellValue);
+
+			// read contact data
+			String contactXpath = xpathStart + rowNum + xpathMiddle + "2" + xpathEnd;
+			String contactName = driver.findElement(By.xpath(contactXpath)).getText();
+			tableCellValue = driver.findElement(By.xpath(contactXpath)).getText();
+			// write contact data
+			reader.setCellData("writeWholeTableSingleFor", "Contact", rowNum, contactName);
+			System.out.println("===================\n" + rowNum + " -> " + tableCellValue);
+
+			// read country data
+			String countryXpath = xpathStart + rowNum + xpathMiddle + "3" + xpathEnd;
+			String countryName = driver.findElement(By.xpath(countryXpath)).getText();
+			tableCellValue = driver.findElement(By.xpath(countryXpath)).getText();
+			// write country data
+			reader.setCellData("writeWholeTableSingleFor", "Country", rowNum, countryName);
+			System.out.println("===================\n" + rowNum + " -> " + tableCellValue);
+		}
+	}
+
+	@Test
+	public void writeTableIntoXcelNestedForLoopTest() {
+		System.out.println(
+				"\n++++++++++++++++++++\n" + "writeTableIntoXcelNestedForLoopTest" + "\n++++++++++++++++++++\n");
+
+		// add sheet
+		if (!reader.isSheetExist("writeWholeTableNestedFor")) {
+			reader.addSheet("writeWholeTableNestedFor");
+			System.out.println("writeWholeTableNestedFor");
 		}
 		// add columns
-		reader.addColumn("writeWholeTableIntoXcel", "Company");
-		reader.addColumn("writeWholeTableIntoXcel", "Contact");
-		reader.addColumn("writeWholeTableIntoXcel", "Country");
+		reader.addColumn("writeWholeTableNestedFor", "Company");
+		reader.addColumn("writeWholeTableNestedFor", "Contact");
+		reader.addColumn("writeWholeTableNestedFor", "Country");
 
 		List<WebElement> rows = driver.findElements(By.xpath("//table[@id='customers']//tr"));
 		int rowCount = rows.size();
@@ -155,21 +208,21 @@ public class TestNG18WriteWebTableIntoXcel extends TestBase {
 
 				System.out.println("===================\n" + rowNum + " -> " + colNum + " -> " + "tableCellValue -> "
 						+ tableCellValue);
-				
-				//write company data
+
+				// write company data
 				String companyXpath = xpathBeforeRow + rowNum + xpathAfterRow + "1" + xpathAfterCol;
 				String companyName = driver.findElement(By.xpath(companyXpath)).getText();
-				reader.setCellData("writeWholeTableIntoXcel", "Company", rowNum, companyName);
-				
-				//write contact data
+				reader.setCellData("writeWholeTableNestedFor", "Company", rowNum, companyName);
+
+				// write contact data
 				String contactXpath = xpathBeforeRow + rowNum + xpathAfterRow + "2" + xpathAfterCol;
 				String contactName = driver.findElement(By.xpath(contactXpath)).getText();
-				reader.setCellData("writeWholeTableIntoXcel", "Contact", rowNum, contactName);
-				
-				//write country data
+				reader.setCellData("writeWholeTableNestedFor", "Contact", rowNum, contactName);
+
+				// write country data
 				String countryXpath = xpathBeforeRow + rowNum + xpathAfterRow + "3" + xpathAfterCol;
 				String countryName = driver.findElement(By.xpath(countryXpath)).getText();
-				reader.setCellData("writeWholeTableIntoXcel", "Country", rowNum, countryName);
+				reader.setCellData("writeWholeTableNestedFor", "Country", rowNum, countryName);
 			}
 		}
 	}
