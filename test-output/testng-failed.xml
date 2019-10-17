@@ -3,17 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.TestNG18WriteWebTableIntoXcel">
+      <class name="com.test.dataprovider.TestNG08DataProviderW3SchoolsTest">
         <methods>
-          <include name="writeWholeTableIntoXcelTest"/>
           <include name="setUp"/>
-          <include name="writeCountryColumnIntoXcelTest"/>
+          <include name="enterRegInfo"/>
           <include name="tearDown"/>
-          <include name="setUpReader"/>
-          <include name="writeCompanyColumnIntoXcelTest"/>
-          <include name="writeContactColumnIntoXcelTest"/>
         </methods>
-      </class> <!-- com.test.TestNG18WriteWebTableIntoXcel -->
+      </class> <!-- com.test.dataprovider.TestNG08DataProviderW3SchoolsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
