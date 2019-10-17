@@ -4,6 +4,13 @@ import org.testng.annotations.Test;
 
 public class TestNG05ExceptionTimeoutExpectedException {
 	
+	/*
+	 * If we expect the exception to happen
+	 * (e.g. it should happen and is not a bug)
+	 * We can force not to fail the test
+	 * with expectedExceptions
+	 */
+	
 //	@Test(invocationTimeOut = 1000)// max execution time
 //	public void infiniteLoopTest() {
 //		int i = 1;

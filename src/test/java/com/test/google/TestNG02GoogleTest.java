@@ -8,8 +8,11 @@ import com.base.GoogleTestBase;
 
 public class TestNG02GoogleTest extends GoogleTestBase{
 /*
- * for this to work go to for this to work, go to config.properties 
- * and change url to https://www.google.com/
+ * Simple demonstration of
+ * assertions
+ * priority
+ * and groups
+ * in TestNG
  */
 	
 	@Test (priority=1, groups="Title")

@@ -1,6 +1,15 @@
 package com.test;
 
 import org.testng.annotations.Test;
+/***
+ * 
+ * @author yulia and tatiana
+ * 
+ * Demonstration on the repetitive multiple execution 
+ * of the same test
+ * through invocationCount  
+ *
+ */
 
 public class TestNG04InvocationCountTest {
 	

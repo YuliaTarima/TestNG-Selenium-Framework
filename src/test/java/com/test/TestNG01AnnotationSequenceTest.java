@@ -11,6 +11,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TestNG01AnnotationSequenceTest {
+	
+	/***
+	 * Demonstration of use 
+	 * of different annotations 
+	 * available in Test NG 
+	 */
 		
 	//@Before- Prerequisite annotations = preconditions
 	

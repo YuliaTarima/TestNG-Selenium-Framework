@@ -6,9 +6,13 @@ import org.testng.annotations.Test;
 import com.base.GoogleTestBase;
 
 /*
- * for this to work go to for this to work, go to config.properties 
- * and change url to https://www.google.com/
+ * Simple demonstration of
+ * assertions
+ * priority
+ * and groups
+ * in TestNG
  */
+
 public class TestNG06GoogleTitleTest extends GoogleTestBase{
 	
 	@Test (priority=1, groups="Title")

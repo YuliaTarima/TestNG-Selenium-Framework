@@ -1,9 +1,3 @@
-/*
- * This test will only run from testngProperties.xml
- * otherwise will not have environment configuration variables/properties
- * and will throw an error that parameters are missing
- * */
-
 package com.test.test2.parameters;
 
 import java.util.concurrent.TimeUnit;
@@ -19,7 +13,16 @@ import org.testng.annotations.Test;
 
 import com.util.TestUtil;
 
-public class TestNG7ParametersTest{
+public class TestNG7ParametersTest {
+	
+	/*
+	 * Simple demonstration of Parameters annotation in TestNG
+	 * See how Parameters are set here: com\test\test2\parameters\testngProperties.xml
+	 * 
+	 * This test will only run from testngProperties.xml
+	 * otherwise will not have environment configuration variables/properties
+	 * and will throw an error that parameters are missing
+	 * */
 	
 	WebDriver driver;
 	

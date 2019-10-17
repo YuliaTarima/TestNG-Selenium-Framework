@@ -3,6 +3,11 @@ package com.test;
 import org.testng.annotations.Test;
 
 public class TestNG03DependencyTest {
+	/**
+	 * Demonstration of how to implement dependency
+	 * of one test on the precondition
+	 * of successful execution of the previous test
+	 */
 	
 	@Test
 	public void loginTest() {
