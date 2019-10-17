@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.dataprovider.TestNG08DataProviderW3SchoolsTest">
+      <class name="com.test.ebay.TestNGEbayTest">
         <methods>
-          <include name="setUp"/>
-          <include name="enterRegInfo"/>
+          <include name="searchTest"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.test.dataprovider.TestNG08DataProviderW3SchoolsTest -->
+      </class> <!-- com.test.ebay.TestNGEbayTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

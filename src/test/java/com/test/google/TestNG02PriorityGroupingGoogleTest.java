@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.base.GoogleTestBase;
 
-public class TestNG02GoogleTest extends GoogleTestBase{
+public class TestNG02PriorityGroupingGoogleTest extends GoogleTestBase {
 /*
  * Simple demonstration of
  * assertions

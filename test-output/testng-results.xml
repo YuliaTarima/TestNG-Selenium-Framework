@@ -8,30 +8,30 @@
       <![CDATA[Browser Session End]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19215" started-at="2019-10-17T11:21:28 PDT" finished-at="2019-10-17T11:21:48 PDT">
+  <suite name="Default suite" duration-ms="11457" started-at="2019-10-17T15:33:11 PDT" finished-at="2019-10-17T15:33:22 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19215" started-at="2019-10-17T11:21:28 PDT" finished-at="2019-10-17T11:21:48 PDT">
-      <class name="com.test.test4.dataprovider.TestNG15WriteIntoXcellTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test4.dataprovider.TestNG15WriteIntoXcellTest@57e1b0c]" name="setUp" is-config="true" duration-ms="12078" started-at="2019-10-17T11:21:28 PDT" finished-at="2019-10-17T11:21:41 PDT">
+    <test name="Default test" duration-ms="11457" started-at="2019-10-17T15:33:11 PDT" finished-at="2019-10-17T15:33:22 PDT">
+      <class name="com.test.ebay.TestNGEbayTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.ebay.TestNGEbayTest@57e1b0c]" name="setUp" is-config="true" duration-ms="6204" started-at="2019-10-17T15:33:11 PDT" finished-at="2019-10-17T15:33:17 PDT">
           <reporter-output>
             <line>
               <![CDATA[Application is set up successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateCreateNewContact()[pri:0, instance:com.test.test4.dataprovider.TestNG15WriteIntoXcellTest@57e1b0c]" name="validateCreateNewContact" duration-ms="4108" started-at="2019-10-17T11:21:41 PDT" finished-at="2019-10-17T11:21:45 PDT">
+        <test-method status="PASS" signature="searchTest()[pri:0, instance:com.test.ebay.TestNGEbayTest@57e1b0c]" name="searchTest" duration-ms="3085" started-at="2019-10-17T15:33:17 PDT" finished-at="2019-10-17T15:33:20 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCreateNewContact -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test4.dataprovider.TestNG15WriteIntoXcellTest@57e1b0c]" name="tearDown" is-config="true" duration-ms="2976" started-at="2019-10-17T11:21:45 PDT" finished-at="2019-10-17T11:21:48 PDT">
+        </test-method> <!-- searchTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.ebay.TestNGEbayTest@57e1b0c]" name="tearDown" is-config="true" duration-ms="2107" started-at="2019-10-17T15:33:20 PDT" finished-at="2019-10-17T15:33:22 PDT">
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.test.test4.dataprovider.TestNG15WriteIntoXcellTest -->
+      </class> <!-- com.test.ebay.TestNGEbayTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

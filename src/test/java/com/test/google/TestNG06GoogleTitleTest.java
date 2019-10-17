@@ -13,7 +13,7 @@ import com.base.GoogleTestBase;
  * in TestNG
  */
 
-public class TestNG06GoogleTitleTest extends GoogleTestBase{
+public class TestNG06GoogleTitleTest extends GoogleTestBase {
 	
 	@Test (priority=1, groups="Title")
 	public void googleTitleTest() {

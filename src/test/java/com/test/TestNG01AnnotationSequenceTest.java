@@ -47,17 +47,17 @@ public class TestNG01AnnotationSequenceTest {
 	//@Test - Test cases
 	//The sequence of test cases will be random if no priority is set
 	
-	@Test 
+	@Test(priority=1, groups="Title")
 	public void googleTitleTest() {
 		System.out.println("#5 in Sequence, each TC, @Test: Google Title Test (Test Case 1)");
 	}
 	
-	@Test
+	@Test(groups="Search")
 	public void searchTest(){
 		System.out.println("#5 in Sequence, each TC, @Test: Search Test (Test Case 2)");
 	}
 	
-	@Test
+	@Test(groups="Logo", enabled=false)
 	public void googleLogoTest() {
 		System.out.println("#5 in Sequence, each TC, @Test: Google Logo Test (Test Case 3)");
 	}
