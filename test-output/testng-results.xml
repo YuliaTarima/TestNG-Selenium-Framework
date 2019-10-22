@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="4" ignored="0" total="4" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
     <line>
       <![CDATA[Application is set up successfully]]>
@@ -13,43 +13,61 @@
     <line>
       <![CDATA[Browser Session End]]>
     </line>
-    <line>
-      <![CDATA[Application is set up successfully]]>
-    </line>
-    <line>
-      <![CDATA[Browser Session End]]>
-    </line>
-    <line>
-      <![CDATA[Application is set up successfully]]>
-    </line>
-    <line>
-      <![CDATA[Browser Session End]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="51047" started-at="2019-10-21T15:06:49 PDT" finished-at="2019-10-21T15:07:40 PDT">
+  <suite name="Default suite" duration-ms="23879" started-at="2019-10-22T11:16:08 PDT" finished-at="2019-10-22T11:16:32 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="51047" started-at="2019-10-21T15:06:49 PDT" finished-at="2019-10-21T15:07:40 PDT">
-      <class name="com.test.test6.screenshotfailed.FailedTestScreenshot">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="setUp" is-config="true" duration-ms="11772" started-at="2019-10-21T15:06:49 PDT" finished-at="2019-10-21T15:07:01 PDT">
+    <test name="Default test" duration-ms="23879" started-at="2019-10-22T11:16:08 PDT" finished-at="2019-10-22T11:16:32 PDT">
+      <class name="com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport">
+        <test-method status="PASS" signature="setExtentReport()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="setExtentReport" is-config="true" duration-ms="147" started-at="2019-10-22T11:16:08 PDT" finished-at="2019-10-22T11:16:08 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtentReport -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="setUp" is-config="true" duration-ms="10951" started-at="2019-10-22T11:16:08 PDT" finished-at="2019-10-22T11:16:19 PDT">
           <reporter-output>
             <line>
               <![CDATA[Application is set up successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="createContactsTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="createContactsTest" duration-ms="14" started-at="2019-10-21T15:07:01 PDT" finished-at="2019-10-21T15:07:01 PDT">
+        <test-method status="PASS" signature="googleLogoTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="googleLogoTest" duration-ms="88" started-at="2019-10-22T11:16:19 PDT" finished-at="2019-10-22T11:16:19 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleLogoTest -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="tearDown" is-config="true" duration-ms="724" started-at="2019-10-22T11:16:19 PDT" finished-at="2019-10-22T11:16:20 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=googleLogoTest status=SUCCESS method=FailedTestScreenshotExtentReport.googleLogoTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Session End]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="setUp" is-config="true" duration-ms="10348" started-at="2019-10-22T11:16:20 PDT" finished-at="2019-10-22T11:16:30 PDT">
+          <reporter-output>
+            <line>
+              <![CDATA[Application is set up successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="googleTitleTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="googleTitleTest" duration-ms="7" started-at="2019-10-22T11:16:30 PDT" finished-at="2019-10-22T11:16:30 PDT">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[createContactsTest screenshotFailedTest expected [true] but found [false]]]>
+              <![CDATA[expected [Let's fail this test on purpose] but found [Google]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: createContactsTest screenshotFailedTest expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: expected [Let's fail this test on purpose] but found [Google]
 at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:751)
-at com.test.test6.screenshotfailed.FailedTestScreenshot.createContactsTest(FailedTestScreenshot.java:34)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport.googleTitleTest(FailedTestScreenshotExtentReport.java:64)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -83,195 +101,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createContactsTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="tearDown" is-config="true" duration-ms="725" started-at="2019-10-21T15:07:02 PDT" finished-at="2019-10-21T15:07:02 PDT">
+        </test-method> <!-- googleTitleTest -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="tearDown" is-config="true" duration-ms="1145" started-at="2019-10-22T11:16:30 PDT" finished-at="2019-10-22T11:16:31 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=googleTitleTest status=FAILURE method=FailedTestScreenshotExtentReport.googleTitleTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="setUp" is-config="true" duration-ms="11752" started-at="2019-10-21T15:07:02 PDT" finished-at="2019-10-21T15:07:14 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Application is set up successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="homePageTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="homePageTest" duration-ms="1" started-at="2019-10-21T15:07:14 PDT" finished-at="2019-10-21T15:07:14 PDT">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[homePageTest: screenshotFailedTest expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: homePageTest: screenshotFailedTest expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:751)
-at com.test.test6.screenshotfailed.FailedTestScreenshot.homePageTest(FailedTestScreenshot.java:24)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="endExtentReport()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="endExtentReport" is-config="true" duration-ms="426" started-at="2019-10-22T11:16:31 PDT" finished-at="2019-10-22T11:16:32 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- homePageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="tearDown" is-config="true" duration-ms="757" started-at="2019-10-21T15:07:15 PDT" finished-at="2019-10-21T15:07:15 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Browser Session End]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="setUp" is-config="true" duration-ms="11631" started-at="2019-10-21T15:07:15 PDT" finished-at="2019-10-21T15:07:27 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Application is set up successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="loginTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="loginTest" duration-ms="4" started-at="2019-10-21T15:07:27 PDT" finished-at="2019-10-21T15:07:27 PDT">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[loginTest: screenshotFailedTest expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: loginTest: screenshotFailedTest expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:751)
-at com.test.test6.screenshotfailed.FailedTestScreenshot.loginTest(FailedTestScreenshot.java:19)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="tearDown" is-config="true" duration-ms="723" started-at="2019-10-21T15:07:27 PDT" finished-at="2019-10-21T15:07:28 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Browser Session End]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="setUp" is-config="true" duration-ms="11180" started-at="2019-10-21T15:07:28 PDT" finished-at="2019-10-21T15:07:39 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Application is set up successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="searchTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="searchTest" duration-ms="2" started-at="2019-10-21T15:07:39 PDT" finished-at="2019-10-21T15:07:39 PDT">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[searchTest: screenshotFailedTest expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: searchTest: screenshotFailedTest expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:751)
-at com.test.test6.screenshotfailed.FailedTestScreenshot.searchTest(FailedTestScreenshot.java:29)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshot@1877ab81]" name="tearDown" is-config="true" duration-ms="721" started-at="2019-10-21T15:07:40 PDT" finished-at="2019-10-21T15:07:40 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Browser Session End]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.test.test6.screenshotfailed.FailedTestScreenshot -->
+        </test-method> <!-- endExtentReport -->
+      </class> <!-- com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
