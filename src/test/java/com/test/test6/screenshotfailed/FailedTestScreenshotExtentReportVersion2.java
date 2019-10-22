@@ -18,7 +18,7 @@ import com.relevantcodes.extentreports.LogStatus;
 //import com.aventstack.extentreports.ExtentTest;
 //import com.aventstack.extentreports.LogStatus;
 
-public class FailedTestScreenshotExtentReportV2 extends ScreenshotTestBase {
+public class FailedTestScreenshotExtentReportVersion2 extends ScreenshotTestBase {
 	
 	/*
 	 * see the report file in /test-output/ExtentReport.html
@@ -35,16 +35,18 @@ public class FailedTestScreenshotExtentReportV2 extends ScreenshotTestBase {
 	
 	@BeforeTest
 	public void setExtentReport(){
-		String reportUrl = System.getProperty("user.dir")+"/test-output/ExtentReport.html";
+		String reportUrl = System.getProperty("user.dir")+"/test-output/ExtentReportVersion2.html";
 		//extent = new ExtentReports(reportUrl, true);
 		extent = new ExtentReports(reportUrl, true);
+		
+		//add any details to report in key-value format
 		extent.addSystemInfo("Host Name", "localhost");
 		extent.addSystemInfo("User Name", "InCoding Girls");
 		extent.addSystemInfo("Environment", "QA");
 	}
 	
 	@Test
-	public void googleTitleTest(){
+	public void googleTitleTestV(){
 		extentTest = extent.startTest("googleTitleTest");
 		String title = driver.getTitle();
 		System.out.println(title);
@@ -74,7 +76,7 @@ public class FailedTestScreenshotExtentReportV2 extends ScreenshotTestBase {
 			//adds error/exception in extent report
 			extentTest.log(LogStatus.FAIL, "TEST CASE FAILED: "+result.getThrowable()); 
 			
-			String screenshotPath = FailedTestScreenshotExtentReportV2.getScreenshot(driver, result.getName());
+			String screenshotPath = FailedTestScreenshotExtentReportVersion2.getScreenshot(driver, result.getName());
 			//adds screenshot in extent report
 			extentTest.log(LogStatus.FAIL, extentTest.addScreenCapture(screenshotPath)); 
 			//adds screencast/video in extent report

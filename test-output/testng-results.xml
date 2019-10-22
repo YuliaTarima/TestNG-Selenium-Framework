@@ -1,61 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
-    <line>
-      <![CDATA[Application is set up successfully]]>
-    </line>
     <line>
       <![CDATA[Browser Session End]]>
     </line>
     <line>
-      <![CDATA[Application is set up successfully]]>
+      <![CDATA[Browser Session End]]>
     </line>
     <line>
       <![CDATA[Browser Session End]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23879" started-at="2019-10-22T11:16:08 PDT" finished-at="2019-10-22T11:16:32 PDT">
+  <suite name="Functional Automation Suite" duration-ms="37062" started-at="2019-10-22T14:28:24 PDT" finished-at="2019-10-22T14:29:01 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23879" started-at="2019-10-22T11:16:08 PDT" finished-at="2019-10-22T11:16:32 PDT">
-      <class name="com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport">
-        <test-method status="PASS" signature="setExtentReport()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="setExtentReport" is-config="true" duration-ms="147" started-at="2019-10-22T11:16:08 PDT" finished-at="2019-10-22T11:16:08 PDT">
+    <test name="Test name here: e.g., Verbose in testng.xml Test" duration-ms="37062" started-at="2019-10-22T14:28:24 PDT" finished-at="2019-10-22T14:29:01 PDT">
+      <class name="com.test.test7.verbose.VerboseInTestngXml">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="setUp" is-config="true" duration-ms="12450" started-at="2019-10-22T14:28:24 PDT" finished-at="2019-10-22T14:28:36 PDT">
           <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setExtentReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="setUp" is-config="true" duration-ms="10951" started-at="2019-10-22T11:16:08 PDT" finished-at="2019-10-22T11:16:19 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Application is set up successfully]]>
-            </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="googleLogoTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="googleLogoTest" duration-ms="88" started-at="2019-10-22T11:16:19 PDT" finished-at="2019-10-22T11:16:19 PDT">
+        <test-method status="PASS" signature="googleLoginTest()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="googleLoginTest" duration-ms="9" started-at="2019-10-22T14:28:36 PDT" finished-at="2019-10-22T14:28:36 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- googleLogoTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="tearDown" is-config="true" duration-ms="724" started-at="2019-10-22T11:16:19 PDT" finished-at="2019-10-22T11:16:20 PDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=googleLogoTest status=SUCCESS method=FailedTestScreenshotExtentReport.googleLogoTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- googleLoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="tearDown" is-config="true" duration-ms="720" started-at="2019-10-22T14:28:36 PDT" finished-at="2019-10-22T14:28:37 PDT">
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="setUp" is-config="true" duration-ms="10348" started-at="2019-10-22T11:16:20 PDT" finished-at="2019-10-22T11:16:30 PDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="setUp" is-config="true" duration-ms="11169" started-at="2019-10-22T14:28:37 PDT" finished-at="2019-10-22T14:28:48 PDT">
           <reporter-output>
-            <line>
-              <![CDATA[Application is set up successfully]]>
-            </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="googleTitleTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="googleTitleTest" duration-ms="7" started-at="2019-10-22T11:16:30 PDT" finished-at="2019-10-22T11:16:30 PDT">
+        <test-method status="PASS" signature="googleLogoTest()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="googleLogoTest" duration-ms="110" started-at="2019-10-22T14:28:48 PDT" finished-at="2019-10-22T14:28:48 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- googleLogoTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="tearDown" is-config="true" duration-ms="699" started-at="2019-10-22T14:28:48 PDT" finished-at="2019-10-22T14:28:49 PDT">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Session End]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="setUp" is-config="true" duration-ms="11084" started-at="2019-10-22T14:28:49 PDT" finished-at="2019-10-22T14:29:00 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="googleTitleTest()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="googleTitleTest" duration-ms="21" started-at="2019-10-22T14:29:00 PDT" finished-at="2019-10-22T14:29:00 PDT">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Let's fail this test on purpose] but found [Google]]]>
@@ -67,7 +62,7 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:575)
 at org.testng.Assert.assertEquals(Assert.java:585)
-at com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport.googleTitleTest(FailedTestScreenshotExtentReport.java:64)
+at com.test.test7.verbose.VerboseInTestngXml.googleTitleTest(VerboseInTestngXml.java:21)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -102,25 +97,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleTitleTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="tearDown" is-config="true" duration-ms="1145" started-at="2019-10-22T11:16:30 PDT" finished-at="2019-10-22T11:16:31 PDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=googleTitleTest status=FAILURE method=FailedTestScreenshotExtentReport.googleTitleTest()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="tearDown" is-config="true" duration-ms="743" started-at="2019-10-22T14:29:00 PDT" finished-at="2019-10-22T14:29:01 PDT">
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="endExtentReport()[pri:0, instance:com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport@76f2b07d]" name="endExtentReport" is-config="true" duration-ms="426" started-at="2019-10-22T11:16:31 PDT" finished-at="2019-10-22T11:16:32 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endExtentReport -->
-      </class> <!-- com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.test.test7.verbose.VerboseInTestngXml -->
+    </test> <!-- Test name here: e.g., Verbose in testng.xml Test -->
+  </suite> <!-- Functional Automation Suite -->
 </testng-results>

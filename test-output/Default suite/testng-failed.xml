@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport">
+      <class name="com.test.VerboseInTestngXml">
         <methods>
-          <include name="setExtentReport"/>
           <include name="googleTitleTest"/>
-          <include name="endExtentReport"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.test.test6.screenshotfailed.FailedTestScreenshotExtentReport -->
+      </class> <!-- com.test.VerboseInTestngXml -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
