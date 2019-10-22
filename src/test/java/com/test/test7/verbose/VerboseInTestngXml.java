@@ -8,6 +8,11 @@ import org.testng.annotations.Test;
 import com.base.Base;
 
 public class VerboseInTestngXml extends Base {
+
+/*
+ * run this test from
+ * com\test\test7\verbose\veboseTestNG.xml
+ */
 	
 	@BeforeMethod
 	public void setUp() {
