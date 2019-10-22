@@ -3,14 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.test5.retrylogic.RetryLogicTest">
+      <class name="com.test.test6.screenshotfailed.FailedTestScreenshot">
         <methods>
-          <include name="testMethodOne"/>
-          <include name="setUp"/>
-          <include name="testMethodTwo"/>
+          <include name="loginTest"/>
+          <include name="searchTest"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="createContactsTest"/>
+          <include name="homePageTest"/>
         </methods>
-      </class> <!-- com.test.test5.retrylogic.RetryLogicTest -->
+      </class> <!-- com.test.test6.screenshotfailed.FailedTestScreenshot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
