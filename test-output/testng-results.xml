@@ -1,110 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
-    <line>
-      <![CDATA[Browser Session End]]>
-    </line>
-    <line>
-      <![CDATA[Browser Session End]]>
-    </line>
-    <line>
-      <![CDATA[Browser Session End]]>
-    </line>
   </reporter-output>
-  <suite name="Functional Automation Suite" duration-ms="37062" started-at="2019-10-22T14:28:24 PDT" finished-at="2019-10-22T14:29:01 PDT">
+  <suite name="Parallel Suite" duration-ms="2131" started-at="2019-10-24T14:01:58 PDT" finished-at="2019-10-24T14:02:01 PDT">
     <groups>
     </groups>
-    <test name="Test name here: e.g., Verbose in testng.xml Test" duration-ms="37062" started-at="2019-10-22T14:28:24 PDT" finished-at="2019-10-22T14:29:01 PDT">
-      <class name="com.test.test7.verbose.VerboseInTestngXml">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="setUp" is-config="true" duration-ms="12450" started-at="2019-10-22T14:28:24 PDT" finished-at="2019-10-22T14:28:36 PDT">
+    <test name="Chrome Test" duration-ms="2111" started-at="2019-10-24T14:01:58 PDT" finished-at="2019-10-24T14:02:00 PDT">
+      <class name="com.test.test11.paralleltest.TestParallelWithXml">
+        <test-method status="PASS" signature="doLogin(java.lang.String)[pri:0, instance:com.test.test11.paralleltest.TestParallelWithXml@36b4cef0]" name="doLogin" duration-ms="2036" started-at="2019-10-24T14:01:58 PDT" finished-at="2019-10-24T14:02:00 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="googleLoginTest()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="googleLoginTest" duration-ms="9" started-at="2019-10-22T14:28:36 PDT" finished-at="2019-10-22T14:28:36 PDT">
+        </test-method> <!-- doLogin -->
+      </class> <!-- com.test.test11.paralleltest.TestParallelWithXml -->
+    </test> <!-- Chrome Test -->
+    <test name="Firefox Test" duration-ms="2131" started-at="2019-10-24T14:01:58 PDT" finished-at="2019-10-24T14:02:01 PDT">
+      <class name="com.test.test11.paralleltest.TestParallelWithXml">
+        <test-method status="PASS" signature="doLogin(java.lang.String)[pri:0, instance:com.test.test11.paralleltest.TestParallelWithXml@7a1ebcd8]" name="doLogin" duration-ms="2036" started-at="2019-10-24T14:01:58 PDT" finished-at="2019-10-24T14:02:00 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- googleLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="tearDown" is-config="true" duration-ms="720" started-at="2019-10-22T14:28:36 PDT" finished-at="2019-10-22T14:28:37 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Browser Session End]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="setUp" is-config="true" duration-ms="11169" started-at="2019-10-22T14:28:37 PDT" finished-at="2019-10-22T14:28:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="googleLogoTest()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="googleLogoTest" duration-ms="110" started-at="2019-10-22T14:28:48 PDT" finished-at="2019-10-22T14:28:48 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googleLogoTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="tearDown" is-config="true" duration-ms="699" started-at="2019-10-22T14:28:48 PDT" finished-at="2019-10-22T14:28:49 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Browser Session End]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="setUp" is-config="true" duration-ms="11084" started-at="2019-10-22T14:28:49 PDT" finished-at="2019-10-22T14:29:00 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="googleTitleTest()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="googleTitleTest" duration-ms="21" started-at="2019-10-22T14:29:00 PDT" finished-at="2019-10-22T14:29:00 PDT">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Let's fail this test on purpose] but found [Google]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Let's fail this test on purpose] but found [Google]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.assertEqualsImpl(Assert.java:136)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at com.test.test7.verbose.VerboseInTestngXml.googleTitleTest(VerboseInTestngXml.java:21)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-at org.testng.TestNG.runSuites(TestNG.java:1032)
-at org.testng.TestNG.run(TestNG.java:1000)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googleTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test7.verbose.VerboseInTestngXml@34cd072c]" name="tearDown" is-config="true" duration-ms="743" started-at="2019-10-22T14:29:00 PDT" finished-at="2019-10-22T14:29:01 PDT">
-          <reporter-output>
-            <line>
-              <![CDATA[Browser Session End]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.test.test7.verbose.VerboseInTestngXml -->
-    </test> <!-- Test name here: e.g., Verbose in testng.xml Test -->
-  </suite> <!-- Functional Automation Suite -->
+        </test-method> <!-- doLogin -->
+      </class> <!-- com.test.test11.paralleltest.TestParallelWithXml -->
+    </test> <!-- Firefox Test -->
+  </suite> <!-- Parallel Suite -->
 </testng-results>

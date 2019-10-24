@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Retry Failed Test Suite]">
   <listeners>
-    <listener class-name="com.test.test5.retrylogic.retryanalyzer.AnnotationTransformer"/>
+    <listener class-name="com.test.test5.retrylogic.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" name="Retry Logic for Failed Test(failed)">
     <classes>

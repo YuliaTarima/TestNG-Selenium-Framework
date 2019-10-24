@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.VerboseInTestngXml">
+      <class name="com.test.test10.parameterization.xml.TestNG02ParametersFromXML">
         <methods>
-          <include name="googleTitleTest"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="getBrowser"/>
         </methods>
-      </class> <!-- com.test.VerboseInTestngXml -->
+      </class> <!-- com.test.test10.parameterization.xml.TestNG02ParametersFromXML -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

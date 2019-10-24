@@ -1,16 +1,17 @@
 package com.test.ebay;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.base.EbayTestBase;
+import com.base.Base;
 
-public class TestNGEbayTest extends EbayTestBase {
+public class TestNGEbayTest extends Base {
 	
 	/*
 	 * Simple demonstration 
@@ -18,6 +19,12 @@ public class TestNGEbayTest extends EbayTestBase {
 	 * and manipulating list contents 
 	 * by looping through the list
 	 */
+	
+	@BeforeClass
+    //@BeforeMethod
+    public void setUp() {
+		initializeUrl("https://www.ebay.com/");		
+	}
 	
 	@Test
 	public void searchTest() {
@@ -42,5 +49,10 @@ public class TestNGEbayTest extends EbayTestBase {
 		 }
 		  */
 	}
-
+	
+	@AfterMethod
+	public void tearDown() {
+		killBrowser();
+	}
+	
 }

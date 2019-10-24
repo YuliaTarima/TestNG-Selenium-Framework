@@ -1,5 +1,6 @@
 package com.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -8,16 +9,24 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
 
 import com.util.TestUtil;
+import com.util.Xls_Reader;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 
 	public static WebDriver driver;
 	public static Properties prop;
+	public static Xls_Reader reader;
 
 	public void initializeUrl(String url) {
 
@@ -25,7 +34,7 @@ public class Base {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					System.getProperty("user.dir") + "/src/main/java/com/config/googleConfig.properties");
+					System.getProperty("user.dir") + "/src/main/java/com/config/config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -84,9 +93,57 @@ public class Base {
 
 		Reporter.log("Application is set up successfully");
 	}
+	
+	public WebDriver setWebDriverManager(String browser) {
 
-	@AfterMethod
-	public void tearDown() {
+		if (browser.equals("chrome")) {
+		    WebDriverManager.chromedriver().setup();
+		    driver = new ChromeDriver();
+		} else if (browser.equals("firefox")) {
+		    WebDriverManager.firefoxdriver().setup();
+		    driver = new FirefoxDriver();
+		} else if (browser.equals("ie")) {
+		    WebDriverManager.iedriver().setup();
+		    driver = new InternetExplorerDriver();
+		} else if (browser.equals("edge")) {
+		    WebDriverManager.edgedriver().setup();
+		    driver = new EdgeDriver();
+		} else if (browser.equals("opera")) {
+		    WebDriverManager.operadriver().setup();
+
+		    OperaOptions options = new OperaOptions();
+		    options.setBinary(
+		            "C:\\Users\\yulia\\AppData\\Local\\Programs\\Opera\\60.0.3255.170\\opera.exe");
+		    DesiredCapabilities capabilities = new DesiredCapabilities();
+		    capabilities.setCapability(OperaOptions.CAPABILITY, options);
+
+		    driver = new OperaDriver(capabilities);
+		} else {
+		    throw new RuntimeException("Unknown browser: " + browser);
+		}
+		return driver;
+	    }
+
+
+	public void setUpXcelReader(String xcelUrl) throws IOException {
+		// set up xcel file
+
+		String fileUrl = System.getProperty("user.dir") + xcelUrl;
+
+		File xcelFile = new File(fileUrl);
+		if (!xcelFile.createNewFile()) {
+			System.out.println("\n++++++++++\n" + "xcelFile already exists" + "\n++++++++++\n");
+		} else {
+			System.out.println("\n++++++++++\n" + "New xcelFile created" + "\n++++++++++\n");
+			// solve this: org.apache.poi.EmptyFileException: The supplied file was empty
+			// (zero bytes long)
+		}
+
+		// set up xcel Reader
+		reader = new Xls_Reader(fileUrl);
+	}	
+	
+	public void killBrowser() {
 		driver.quit();
 		Reporter.log("Browser Session End");
 	}
