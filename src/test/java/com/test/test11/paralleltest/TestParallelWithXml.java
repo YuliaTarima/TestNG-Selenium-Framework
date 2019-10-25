@@ -17,8 +17,8 @@ public class TestParallelWithXml {
     @Test
     public void doLogin(String browser) throws InterruptedException {
 	
-	Date d = new Date();
-	System.out.println(browser + "----" + d);
+	Date date = new Date();
+	System.out.println(browser + "----" + date);
 	Thread.sleep(2000);
     }
 

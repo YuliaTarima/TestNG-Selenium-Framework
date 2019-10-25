@@ -15,7 +15,7 @@ public class AssertionsPriorityGroupGmailTest extends Base {
 	
 	@BeforeClass
     public void setUp() {
-		initializeUrl("https://mail.google.com/");
+		initialize("https://mail.google.com/");
 		System.out.println("\n##########\n"+"Before Class: setUp"+"\n##########\n");
 	}
 	

@@ -19,7 +19,7 @@ public class WriteW3WebTableIntoXcelTest extends Base {
 	
 	@BeforeClass
     public void setUp() throws IOException {
-		initializeUrl("https://www.w3schools.com/html/html_tables.asp");
+		initialize("https://www.w3schools.com/html/html_tables.asp");
 		setUpXcelReader("/src/main/java/com/testdata/WtriteWebTableIntoXcel.xlsx");
 		System.out.println("\n##########\n"+"Before Class: setUp"+"\n##########\n");
 	}

@@ -3,11 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.test10.parameterization.xml.TestNG02ParametersFromXML">
+      <class name="com.test.test07.listeners.onfailure.screenshot.xml.LoginTest">
         <methods>
-          <include name="getBrowser"/>
+          <include name="doLogin"/>
+          <include name="composeEmail"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.test.test10.parameterization.xml.TestNG02ParametersFromXML -->
+      </class> <!-- com.test.test07.listeners.onfailure.screenshot.xml.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

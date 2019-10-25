@@ -23,7 +23,7 @@ public class TestNGEbayTest extends Base {
 	@BeforeClass
     //@BeforeMethod
     public void setUp() {
-		initializeUrl("https://www.ebay.com/");		
+		initialize("https://www.ebay.com/");		
 	}
 	
 	@Test

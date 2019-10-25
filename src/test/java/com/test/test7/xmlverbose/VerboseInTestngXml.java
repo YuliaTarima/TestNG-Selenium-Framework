@@ -16,7 +16,7 @@ public class VerboseInTestngXml extends Base {
 	
 	@BeforeMethod
 	public void setUp() {
-		initializeUrl("https://www.google.com/");
+		initialize("https://www.google.com/");
 	}
 	
 	@Test

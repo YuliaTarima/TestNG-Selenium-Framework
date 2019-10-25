@@ -20,7 +20,7 @@ public class AssertionsPriorityGroupGoogleTest extends Base {
 	
 	@BeforeClass
     public void setUp() {
-		initializeUrl("https://www.google.com/");
+		initialize("https://www.google.com/");
 		System.out.println("\n##########\n"+"Before Class: setUp"+"\n##########\n");
 	}
 	

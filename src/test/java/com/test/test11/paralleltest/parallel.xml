@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <!--<suite name="Parallel Suite">-->
-<suite name="Parallel Suite" parallel="tests">
+<suite name="Parallel Automation Suite" parallel="tests">
 
 	<test name="Firefox Test">
 		<parameter name="browser" value="firefox"></parameter>

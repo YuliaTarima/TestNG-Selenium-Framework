@@ -19,7 +19,7 @@ public class TestNG03XcelToW3SchoolsForm extends Base {
 
 	@BeforeClass
     public void setUp() throws IOException {
-		initializeUrl("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_submit");
+		initialize("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_submit");
 		setUpXcelReader("/src/main/java/com/testdata/RegistrationTestdata.xlsx");
 		System.out.println("\n##########\n"+"Before Class: setUp"+"\n##########\n");
 	}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Functional Suite">
+
+	<listeners>
+		<listener class-name="com.test.test07.listeners.onfailure.xml.Listeners"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	</listeners>
+
+	<test name="Login Test">
+		<classes>
+			<class name="com.test.test01.annotationsequence.TestCase1" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Validate Title Test">
+		<classes>
+			<class name="com.test.test03.softassertion.TestCase2SoftAssert" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Dependency Test">
+		<!-- group defined at the test level <groups> <run> <include name="bvt"></include> 
+			</run> </groups> -->
+		<classes>
+			<class name="com.test.test04.dependency.TestCase3DependsOnMethods" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Failure Test">
+		<classes>
+			<class name="com.test.test07.listeners.onfailure.xml.TestFailureWithXmlListener" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
