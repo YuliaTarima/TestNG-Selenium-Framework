@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Login Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Oct 25 11:01:57 PDT 2019</td>
+<td>Started on:</td><td>Fri Oct 25 11:05:55 PDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1324 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23344 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,12 +77,12 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail()'><b>composeEmail</b><br>Test class: com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest</td>
 <td><div><pre>java.lang.AssertionError: Error in composing email
-	at com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail(ScreenshotZipMailTest.java:21)
+	at com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail(ScreenshotZipMailTest.java:30)
 	at java.util.ArrayList.forEach(Unknown Source)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace507911745", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace507911745'><pre>java.lang.AssertionError: Error in composing email
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace186061555", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace186061555'><pre>java.lang.AssertionError: Error in composing email
 	at org.testng.Assert.fail(Assert.java:97)
-	at com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail(ScreenshotZipMailTest.java:21)
+	at com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail(ScreenshotZipMailTest.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -113,7 +113,45 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@36b4cef0</td></tr>
+<td>com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee</td></tr>
+<tr>
+<td title='com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail()'><b>composeEmail</b><br>Test class: com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.test.test07.listeners.onfailure.screenshot.mail.testUtil.captureScreenshot(testUtil.java:33)
+	at com.test.test07.listeners.onfailure.screenshot.mail.TestListeners.onTestFailure(TestListeners.java:41)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1196982797", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1196982797'><pre>java.lang.NullPointerException
+	at com.test.test07.listeners.onfailure.screenshot.mail.testUtil.captureScreenshot(testUtil.java:33)
+	at com.test.test07.listeners.onfailure.screenshot.mail.TestListeners.onTestFailure(TestListeners.java:41)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:66)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:210)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:638)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -126,7 +164,7 @@ function toggleAllBoxes() {
 <td title='com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.doLogin()'><b>doLogin</b><br>Test class: com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest</td>
 <td></td>
 <td>0</td>
-<td>com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@36b4cef0</td></tr>
+<td>com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee</td></tr>
 </table><p>
 </body>
 </html>
