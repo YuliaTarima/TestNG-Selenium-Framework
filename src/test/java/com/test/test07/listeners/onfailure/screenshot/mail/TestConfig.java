@@ -1,4 +1,4 @@
-package com.test.test07.listeners.onfailure.mail;
+package com.test.test07.listeners.onfailure.screenshot.mail;
 
 public class TestConfig{
 	

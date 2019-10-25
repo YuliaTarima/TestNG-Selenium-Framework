@@ -2,18 +2,17 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [TestNG Listeners on Failure]">
   <listeners>
-    <listener class-name="com.test.test07.listeners.onfailure.screenshot.xml.Listener"/>
+    <listener class-name="com.test.test07.listeners.onfailure.screenshot.mail.TestListeners"/>
   </listeners>
   <test thread-count="5" name="Login Test(failed)">
     <classes>
-      <class name="com.test.test07.listeners.onfailure.screenshot.xml.ScreenshotFromXmlTest">
+      <class name="com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="composeEmail"/>
-          <include name="doLogin"/>
           <include name="setUp"/>
+          <include name="composeEmail"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.test.test07.listeners.onfailure.screenshot.xml.ScreenshotFromXmlTest -->
+      </class> <!-- com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest -->
     </classes>
   </test> <!-- Login Test(failed) -->
 </suite> <!-- Failed suite [TestNG Listeners on Failure] -->

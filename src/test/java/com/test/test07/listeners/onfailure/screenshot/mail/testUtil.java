@@ -1,4 +1,4 @@
-package com.test.test07.listeners.onfailure.mail;
+package com.test.test07.listeners.onfailure.screenshot.mail;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -15,9 +15,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.base.TestBase;
-
-public class mailUtil extends TestBase {
+public class testUtil extends TestBase {
 
     public static String mailscreenshotpath;
     // public static String zipPath;

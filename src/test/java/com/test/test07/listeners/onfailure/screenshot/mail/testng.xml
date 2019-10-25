@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Listeners on Failure">
+
+	<listeners>
+		<listener class-name="com.test.test07.listeners.onfailure.screenshot.mail.TestListeners"></listener>
+	</listeners>
+
+	<test name="Login Test">
+		<classes>
+			<class name="com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

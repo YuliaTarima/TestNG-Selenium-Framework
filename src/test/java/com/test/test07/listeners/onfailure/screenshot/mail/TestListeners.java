@@ -1,4 +1,4 @@
-package com.test.test07.listeners.onfailure.mail;
+package com.test.test07.listeners.onfailure.screenshot.mail;
 
 import java.io.IOException;
 
@@ -9,9 +9,6 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-
-import com.base.TestBase;
-import com.test.test07.listeners.onfailure.screenshot.xml.Util;
 
 public class TestListeners extends TestBase implements ITestListener {
 
@@ -41,7 +38,7 @@ public class TestListeners extends TestBase implements ITestListener {
 	String methodName = result.getName().toString().trim();
 
 	try {
-	    Util.captureScreenshot(methodName);
+	    testUtil.captureScreenshot(methodName);
 	} catch (IOException e) {
 	    // TODO Auto-generated catch block
 	    e.printStackTrace();
@@ -63,7 +60,7 @@ public class TestListeners extends TestBase implements ITestListener {
 
     public void onFinish(ITestContext arg0) {
 
-	Util.zip(System.getProperty("user.dir") + "\\screenshot");
+	testUtil.zip(System.getProperty("user.dir") + "\\screenshot");
 	monitoringMail mail = new monitoringMail();
 	
 	try {
