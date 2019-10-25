@@ -14,37 +14,37 @@
       <![CDATA[Browser Session End]]>
     </line>
   </reporter-output>
-  <suite name="TestNG Listeners on Failure" duration-ms="22280" started-at="2019-10-25T11:14:38 PDT" finished-at="2019-10-25T11:15:00 PDT">
+  <suite name="TestNG Listeners on Failure" duration-ms="24231" started-at="2019-10-25T11:34:12 PDT" finished-at="2019-10-25T11:34:37 PDT">
     <groups>
     </groups>
-    <test name="Login Test" duration-ms="22280" started-at="2019-10-25T11:14:38 PDT" finished-at="2019-10-25T11:15:00 PDT">
+    <test name="Login Test" duration-ms="24231" started-at="2019-10-25T11:34:12 PDT" finished-at="2019-10-25T11:34:37 PDT">
       <class name="com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee]" name="setUp" is-config="true" duration-ms="9428" started-at="2019-10-25T11:14:38 PDT" finished-at="2019-10-25T11:14:47 PDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="setUp" is-config="true" duration-ms="11376" started-at="2019-10-25T11:34:13 PDT" finished-at="2019-10-25T11:34:24 PDT">
           <reporter-output>
             <line>
               <![CDATA[Application is set up successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="doLogin()[pri:1, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee]" name="doLogin" duration-ms="416" started-at="2019-10-25T11:14:47 PDT" finished-at="2019-10-25T11:14:47 PDT">
+        <test-method status="PASS" signature="doLogin()[pri:1, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="doLogin" duration-ms="402" started-at="2019-10-25T11:34:24 PDT" finished-at="2019-10-25T11:34:24 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee]" name="tearDown" is-config="true" duration-ms="723" started-at="2019-10-25T11:14:48 PDT" finished-at="2019-10-25T11:14:48 PDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="tearDown" is-config="true" duration-ms="688" started-at="2019-10-25T11:34:24 PDT" finished-at="2019-10-25T11:34:25 PDT">
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee]" name="setUp" is-config="true" duration-ms="10498" started-at="2019-10-25T11:14:48 PDT" finished-at="2019-10-25T11:14:59 PDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="setUp" is-config="true" duration-ms="10615" started-at="2019-10-25T11:34:25 PDT" finished-at="2019-10-25T11:34:36 PDT">
           <reporter-output>
             <line>
               <![CDATA[Application is set up successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="composeEmail()[pri:2, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee]" name="composeEmail" duration-ms="3" started-at="2019-10-25T11:14:59 PDT" finished-at="2019-10-25T11:14:59 PDT">
+        <test-method status="FAIL" signature="composeEmail()[pri:2, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="composeEmail" duration-ms="5" started-at="2019-10-25T11:34:36 PDT" finished-at="2019-10-25T11:34:36 PDT">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Error in composing email]]>
@@ -87,7 +87,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- composeEmail -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@fad74ee]" name="tearDown" is-config="true" duration-ms="736" started-at="2019-10-25T11:14:59 PDT" finished-at="2019-10-25T11:15:00 PDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="tearDown" is-config="true" duration-ms="697" started-at="2019-10-25T11:34:36 PDT" finished-at="2019-10-25T11:34:37 PDT">
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
