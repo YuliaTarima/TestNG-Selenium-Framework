@@ -10,7 +10,9 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-public class TestListeners extends TestBase implements ITestListener {
+import com.base.Base;
+
+public class TestListeners extends Base implements ITestListener {
 
     public void onTestStart(ITestResult result) {
 	// TODO Auto-generated method stub
@@ -64,8 +66,8 @@ public class TestListeners extends TestBase implements ITestListener {
 	monitoringMail mail = new monitoringMail();
 	
 	try {
-	    mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject,
-	            TestConfig.messageBody, TestConfig.attachmentPath, TestConfig.attachmentName);
+	    mail.sendMail(MailConfig.server, MailConfig.from, MailConfig.to, MailConfig.subject,
+	            MailConfig.messageBody, MailConfig.attachmentPath, MailConfig.attachmentName);
 	} catch (AddressException e) {
 	    // TODO Auto-generated catch block
 	    e.printStackTrace();

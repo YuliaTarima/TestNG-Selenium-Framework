@@ -143,7 +143,7 @@
                   </a> <!-- composeEmail -->
                   <span class="method-name">composeEmail</span>
                   <div class="stack-trace">java.lang.AssertionError: Error in composing email
-	at com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail(ScreenshotZipMailTest.java:21)
+	at com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail(ScreenshotZipMailTest.java:30)
 	at java.util.ArrayList.forEach(Unknown Source)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
@@ -225,16 +225,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'doLogin')
 data.setCell(0, 2, 'com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest')
-data.setCell(0, 3, 540);
+data.setCell(0, 3, 416);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'composeEmail')
 data.setCell(1, 2, 'com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest')
-data.setCell(1, 3, 4);
+data.setCell(1, 3, 3);
 window.suiteTableData['TestNG_Listeners_on_Failure']= { tableData: data, tableDiv: 'times-div-TestNG_Listeners_on_Failure'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 544 ms</span>
+              <span class="suite-total-time">Total running time: 419 ms</span>
               <div id="times-div-TestNG_Listeners_on_Failure">
               </div> <!-- times-div-TestNG_Listeners_on_Failure -->
             </div> <!-- times-div -->
@@ -261,24 +261,32 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
+              <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">doLogin</span>
-                <span class="method-start">11575 ms</span>
+                <span class="method-start">9431 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">9851 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">10576 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">composeEmail</span>
-                <span class="method-start">12121 ms</span>
+                <span class="method-start">21074 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-suite after">
+              <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">17666 ms</span>
-              </div> <!-- configuration-suite after -->
+                <span class="method-start">21502 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

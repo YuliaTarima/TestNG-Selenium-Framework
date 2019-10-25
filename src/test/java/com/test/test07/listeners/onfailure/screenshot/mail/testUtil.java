@@ -15,7 +15,9 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-public class testUtil extends TestBase {
+import com.base.Base;
+
+public class testUtil extends Base {
 
     public static String mailscreenshotpath;
     // public static String zipPath;

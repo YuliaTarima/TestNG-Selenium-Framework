@@ -1,6 +1,6 @@
 package com.test.test07.listeners.onfailure.screenshot.mail;
 
-public class TestConfig{
+public class MailConfig{
 	
 	public static String server="smtp.gmail.com";
 	public static String from = "yuliatarima@gmail.com";
