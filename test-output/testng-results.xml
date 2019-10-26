@@ -1,58 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="1" failed="1" ignored="0" total="3" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[Application is set up successfully]]>
-    </line>
     <line>
       <![CDATA[Browser Session End]]>
     </line>
     <line>
-      <![CDATA[Application is set up successfully]]>
+      <![CDATA[Browser Session End]]>
     </line>
     <line>
       <![CDATA[Browser Session End]]>
     </line>
   </reporter-output>
-  <suite name="TestNG Listeners on Failure" duration-ms="24231" started-at="2019-10-25T11:34:12 PDT" finished-at="2019-10-25T11:34:37 PDT">
+  <suite name="Default suite" duration-ms="19212" started-at="2019-10-25T21:49:07 PDT" finished-at="2019-10-25T21:49:27 PDT">
     <groups>
     </groups>
-    <test name="Login Test" duration-ms="24231" started-at="2019-10-25T11:34:12 PDT" finished-at="2019-10-25T11:34:37 PDT">
-      <class name="com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="setUp" is-config="true" duration-ms="11376" started-at="2019-10-25T11:34:13 PDT" finished-at="2019-10-25T11:34:24 PDT">
+    <test name="Default test" duration-ms="19212" started-at="2019-10-25T21:49:07 PDT" finished-at="2019-10-25T21:49:27 PDT">
+      <class name="com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1">
+        <test-method status="PASS" signature="setReport()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="setReport" is-config="true" duration-ms="138" started-at="2019-10-25T21:49:07 PDT" finished-at="2019-10-25T21:49:08 PDT">
           <reporter-output>
-            <line>
-              <![CDATA[Application is set up successfully]]>
-            </line>
+          </reporter-output>
+        </test-method> <!-- setReport -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="setUp" is-config="true" duration-ms="5957" started-at="2019-10-25T21:49:08 PDT" finished-at="2019-10-25T21:49:14 PDT">
+          <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="doLogin()[pri:1, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="doLogin" duration-ms="402" started-at="2019-10-25T11:34:24 PDT" finished-at="2019-10-25T11:34:24 PDT">
+        <test-method status="PASS" signature="doLogin()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="doLogin" duration-ms="11" started-at="2019-10-25T21:49:14 PDT" finished-at="2019-10-25T21:49:14 PDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="tearDown" is-config="true" duration-ms="688" started-at="2019-10-25T11:34:24 PDT" finished-at="2019-10-25T11:34:25 PDT">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="tearDown" is-config="true" duration-ms="637" started-at="2019-10-25T21:49:14 PDT" finished-at="2019-10-25T21:49:14 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=doLogin status=SUCCESS method=TestCase1.doLogin()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="setUp" is-config="true" duration-ms="10615" started-at="2019-10-25T11:34:25 PDT" finished-at="2019-10-25T11:34:36 PDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="setUp" is-config="true" duration-ms="5188" started-at="2019-10-25T21:49:14 PDT" finished-at="2019-10-25T21:49:19 PDT">
           <reporter-output>
-            <line>
-              <![CDATA[Application is set up successfully]]>
-            </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="composeEmail()[pri:2, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="composeEmail" duration-ms="5" started-at="2019-10-25T11:34:36 PDT" finished-at="2019-10-25T11:34:36 PDT">
+        <test-method status="FAIL" signature="doUserReg()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="doUserReg" duration-ms="4" started-at="2019-10-25T21:49:19 PDT" finished-at="2019-10-25T21:49:19 PDT">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Error in composing email]]>
+              <![CDATA[User Reg Test Failed]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Error in composing email
+              <![CDATA[java.lang.AssertionError: User Reg Test Failed
 at org.testng.Assert.fail(Assert.java:97)
-at com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest.composeEmail(ScreenshotZipMailTest.java:30)
+at com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1.doUserReg(TestCase1.java:82)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -86,15 +88,86 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- composeEmail -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest@3d921e20]" name="tearDown" is-config="true" duration-ms="697" started-at="2019-10-25T11:34:36 PDT" finished-at="2019-10-25T11:34:37 PDT">
+        </test-method> <!-- doUserReg -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="tearDown" is-config="true" duration-ms="990" started-at="2019-10-25T21:49:19 PDT" finished-at="2019-10-25T21:49:20 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=doUserReg status=FAILURE method=TestCase1.doUserReg()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Browser Session End]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.test.test07.listeners.onfailure.screenshot.mail.ScreenshotZipMailTest -->
-    </test> <!-- Login Test -->
-  </suite> <!-- TestNG Listeners on Failure -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="setUp" is-config="true" duration-ms="5176" started-at="2019-10-25T21:49:20 PDT" finished-at="2019-10-25T21:49:26 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="isSkip()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="isSkip" duration-ms="1" started-at="2019-10-25T21:49:26 PDT" finished-at="2019-10-25T21:49:26 PDT">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test case]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test case
+at com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1.isSkip(TestCase1.java:96)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isSkip -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="tearDown" is-config="true" duration-ms="705" started-at="2019-10-25T21:49:26 PDT" finished-at="2019-10-25T21:49:26 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=isSkip status=SKIP method=TestCase1.isSkip()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Session End]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1@6f195bc3]" name="endReport" is-config="true" duration-ms="358" started-at="2019-10-25T21:49:26 PDT" finished-at="2019-10-25T21:49:27 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -3,14 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.test07.listeners.onfailure.screenshot.xml.LoginTest">
+      <class name="com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1">
         <methods>
-          <include name="doLogin"/>
-          <include name="composeEmail"/>
+          <include name="endReport"/>
+          <include name="doUserReg"/>
           <include name="setUp"/>
+          <include name="setReport"/>
           <include name="tearDown"/>
+          <include name="isSkip"/>
         </methods>
-      </class> <!-- com.test.test07.listeners.onfailure.screenshot.xml.LoginTest -->
+      </class> <!-- com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
