@@ -2,18 +2,16 @@ package com.test.test07.listeners.onfailure.screenshot.extentreport2;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.base.Base;
@@ -21,9 +19,26 @@ import com.base.Base;
 public class ExtentManager extends Base {
 
 	private static ExtentReports extent;
+	public ExtentHtmlReporter htmlReporter;
+	public ExtentTest test;
+
 	public static String screenshotPath;
 	public static String screenshotName;
 	public static String destinationUrl;
+	
+	public static ExtentHtmlReporter setReportStyle(String reportUrl) {
+		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(reportUrl);
+
+		// set look and feel
+		htmlReporter.config().setEncoding("utf-8");
+		htmlReporter.config().setDocumentTitle("InCodingGirls Automation Reports");
+		htmlReporter.config().setReportName("Automation Test Results");
+		htmlReporter.config().setTheme(Theme.DARK);
+		String css = ".r-img {width: 100%;} .screenshots > li img {border: 1px solid #ff0000;} .step-details > img {border: 1px solid #ff0000;}";
+		htmlReporter.config().setCSS(css);
+		
+		return htmlReporter;
+	}
 
 	public static ExtentReports createInstance() {
 		// set the reports folder

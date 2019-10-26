@@ -22,12 +22,22 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.base.Base;
-import com.test.test07.listeners.onfailure.screenshot.extentreport1.Util;
 
-public class TestCase1 extends Base{
+public class TestCase1ManualExtentSetup extends Base{
 
 	/*
+	 * This is an example of manual setup
+	 * of Extent Report 
+	 * per each test case within a class
+	 * 
+	 * Alternative is a dynamic setup
+	 * through Listeners
+	 * src/test/java/com/test/test07/listeners/onfailure/screenshot/extentreport2/TestCase2DynamicExtentSetup.java
+	 * 
+	 * Run this test from this class
+	 * 
 	 * see the report file in /test-output/ExtentReport.html
+	 * test-output/ExtentReportV4.html
 	 */
 
 	public ExtentHtmlReporter htmlReporter;
@@ -133,7 +143,7 @@ public class TestCase1 extends Base{
 
 			String methodName = result.getMethod().getMethodName();
 
-			String logText = "<b>" + "TEST CASE: - " + methodName.toUpperCase() + "  SKIPPED" + "</b>";
+			String logText = "<b>" + "TEST CASE: " + methodName.toUpperCase() + "  SKIPPED" + "</b>";
 
 			Markup m = MarkupHelper.createLabel(logText, ExtentColor.ORANGE);
 			test.skip(m);
@@ -142,7 +152,7 @@ public class TestCase1 extends Base{
 
 			String methodName = result.getMethod().getMethodName();
 
-			String logText = "<b>" + "TEST CASE: - " + methodName.toUpperCase() + "  PASSED" + "</b>";
+			String logText = "<b>" + "TEST CASE: " + methodName.toUpperCase() + "  PASSED" + "</b>";
 
 			Markup markUp = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
 			test.pass(markUp);

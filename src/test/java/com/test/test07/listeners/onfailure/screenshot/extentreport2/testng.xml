@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Extent Report Dynamic Listener Suite">
 
 	<listeners>
-
-		<listener class-name="extentlisteners.ExtentListeners" />
-
+		<listener
+			class-name="com.test.test07.listeners.onfailure.screenshot.extentreport2.ExtentListeners" />
 	</listeners>
 
 
 	<test name="Test">
 		<classes>
-			<class name="testcases.TestCase2" />
+			<class name="com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase2DynamicExtentSetup" />
 		</classes>
 	</test> <!-- Test -->
+
 </suite> <!-- Suite -->
