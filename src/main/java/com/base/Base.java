@@ -17,6 +17,7 @@ import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Reporter;
 
+import com.util.OsUtil;
 import com.util.TestUtil;
 import com.util.Xls_Reader;
 
@@ -28,6 +29,9 @@ public class Base {
 	public static Properties prop;
 	public static Xls_Reader reader;
 	
+/*###############################################################################*/
+/************overloaded initialize()***********/
+
 	public void initialize() {
 		// set up properties file
 		try {
@@ -45,10 +49,32 @@ public class Base {
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+			if (OsUtil.isWindows()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+			} else if (OsUtil.isMac()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver_mac");
+			} else if (OsUtil.isUnix()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver_linux");
+			}
+
 			driver = new ChromeDriver();
+
 		} else if (browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+
+			if (OsUtil.isWindows()) {
+				System.setProperty("webdriver.gecko.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+			} else if (OsUtil.isMac()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver_mac");
+			} else if (OsUtil.isUnix()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver_linux");
+			}
+
 			driver = new FirefoxDriver();
 		}
 
@@ -62,7 +88,7 @@ public class Base {
 		Reporter.log("Application is set up successfully");
 	}
 
-	public void initialize(String url) {
+	public void initialize(String webUrl) {
 
 		// get browserName from properties file
 		try {
@@ -78,11 +104,34 @@ public class Base {
 
 		// set up browser
 		String browserName = prop.getProperty("browser");
+
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+			if (OsUtil.isWindows()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+			} else if (OsUtil.isMac()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver_mac");
+			} else if (OsUtil.isUnix()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver_linux");
+			}
+
 			driver = new ChromeDriver();
+
 		} else if (browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+
+			if (OsUtil.isWindows()) {
+				System.setProperty("webdriver.gecko.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+			} else if (OsUtil.isMac()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver_mac");
+			} else if (OsUtil.isUnix()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver_linux");
+			}
+
 			driver = new FirefoxDriver();
 		}
 
@@ -90,16 +139,39 @@ public class Base {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		driver.get(url);
+		driver.get(webUrl);
 	}
 
-	public void initialize(String url, String browserName) {
+	public void initialize(String webUrl, String browserName) {
 
+		// set up browser
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+			if (OsUtil.isWindows()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver.exe");
+			} else if (OsUtil.isMac()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver_mac");
+			} else if (OsUtil.isUnix()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/chromedriver_linux");
+			}
+
 			driver = new ChromeDriver();
+
 		} else if (browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+
+			if (OsUtil.isWindows()) {
+				System.setProperty("webdriver.gecko.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver.exe");
+			} else if (OsUtil.isMac()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver_mac");
+			} else if (OsUtil.isUnix()) {
+				System.setProperty("webdriver.chrome.driver",
+						System.getProperty("user.dir") + "/drivers/geckodriver_linux");
+			}
+
 			driver = new FirefoxDriver();
 		}
 
@@ -107,8 +179,11 @@ public class Base {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		driver.get(url);
+		driver.get(webUrl);
 	}
+	
+	/*###############################################################################*/
+	/************overloaded setWebDriverManager()***********/
 
 	public WebDriver setWebDriverManager(String browser) {
 
@@ -194,8 +269,8 @@ public class Base {
 
 	public void killBrowser() {
 		if (driver != null) {
-            driver.quit();
-        }
+			driver.quit();
+		}
 		Reporter.log("Browser Session End");
 	}
 }

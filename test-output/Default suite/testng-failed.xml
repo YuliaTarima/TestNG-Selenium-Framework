@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase2DynamicExtentSetup">
+      <class name="com.test.test10.parameterization.xcel.reading.TestNG09XcelReaderExpressRegTest">
         <methods>
-          <include name="isSkip"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="doUserReg"/>
+          <include name="ExpressRegPageTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.test.test07.listeners.onfailure.screenshot.extentreport2.TestCase2DynamicExtentSetup -->
+      </class> <!-- com.test.test10.parameterization.xcel.reading.TestNG09XcelReaderExpressRegTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
