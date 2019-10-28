@@ -29,6 +29,12 @@ public class Base {
 	public static Properties prop;
 	public static Xls_Reader reader;
 	
+//	public static WebDriver createDriverInstance() {
+//		return driver;
+//		
+//	}
+//	
+	
 /*###############################################################################*/
 /************overloaded initialize()***********/
 
@@ -48,7 +54,7 @@ public class Base {
 		// set up browser
 		String browserName = prop.getProperty("browser");
 
-		if (browserName.equals("chrome")) {
+		if (browserName.equalsIgnoreCase("chrome")) {
 			if (OsUtil.isWindows()) {
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "/drivers/chromedriver.exe");
@@ -62,7 +68,7 @@ public class Base {
 
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("FF")) {
+		} else if (browserName.equalsIgnoreCase("FF")) {
 
 			if (OsUtil.isWindows()) {
 				System.setProperty("webdriver.gecko.driver",
@@ -105,7 +111,7 @@ public class Base {
 		// set up browser
 		String browserName = prop.getProperty("browser");
 
-		if (browserName.equals("chrome")) {
+		if (browserName.equalsIgnoreCase("chrome")) {
 			if (OsUtil.isWindows()) {
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "/drivers/chromedriver.exe");
@@ -119,7 +125,7 @@ public class Base {
 
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("FF")) {
+		} else if (browserName.equalsIgnoreCase("FF")) {
 
 			if (OsUtil.isWindows()) {
 				System.setProperty("webdriver.gecko.driver",
@@ -145,7 +151,7 @@ public class Base {
 	public void initialize(String webUrl, String browserName) {
 
 		// set up browser
-		if (browserName.equals("chrome")) {
+		if (browserName.equalsIgnoreCase("chrome")) {
 			if (OsUtil.isWindows()) {
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "/drivers/chromedriver.exe");
@@ -159,7 +165,7 @@ public class Base {
 
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("FF")) {
+		} else if (browserName.equalsIgnoreCase("FF")) {
 
 			if (OsUtil.isWindows()) {
 				System.setProperty("webdriver.gecko.driver",
@@ -187,19 +193,19 @@ public class Base {
 
 	public WebDriver setWebDriverManager(String browser) {
 
-		if (browser.equals("chrome")) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (browser.equals("firefox")) {
+		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else if (browser.equals("ie")) {
+		} else if (browser.equalsIgnoreCase("ie")) {
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
-		} else if (browser.equals("edge")) {
+		} else if (browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
-		} else if (browser.equals("opera")) {
+		} else if (browser.equalsIgnoreCase("opera")) {
 			WebDriverManager.operadriver().setup();
 
 			OperaOptions options = new OperaOptions();
@@ -216,16 +222,16 @@ public class Base {
 
 	public void setWebDriverManager(String browser, String url) {
 
-		if (browser.equals("chrome")) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (browser.equals("firefox")) {
+		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		} else if (browser.equals("ie")) {
+		} else if (browser.equalsIgnoreCase("ie")) {
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
-		} else if (browser.equals("edge")) {
+		} else if (browser.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		} else if (browser.equals("opera")) {

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Parallel Tests with Multi-Threading Suite]" parallel="tests">
+  <test thread-count="4" name="TC4(failed)" parallel="tests">
+    <parameter name="search" value="furry fish"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="googleParallelSearchTest" invocation-numbers="0"/>
+          <include name="prepareTest"/>
+        </methods>
+      </class> <!-- com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest -->
+    </classes>
+  </test> <!-- TC4(failed) -->
+  <test thread-count="4" name="TC1(failed)" parallel="tests">
+    <parameter name="search" value="edible statues"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="googleParallelSearchTest" invocation-numbers="0"/>
+          <include name="prepareTest"/>
+        </methods>
+      </class> <!-- com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest -->
+    </classes>
+  </test> <!-- TC1(failed) -->
+</suite> <!-- Failed suite [Parallel Tests with Multi-Threading Suite] -->

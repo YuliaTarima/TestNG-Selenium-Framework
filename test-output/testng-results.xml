@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[Browser Session End]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19177" started-at="2019-10-28T12:37:24 PDT" finished-at="2019-10-28T12:37:43 PDT">
+  <suite name="Parallel Tests with Multi-Threading Suite" duration-ms="16212" started-at="2019-10-28T16:25:59 PDT" finished-at="2019-10-28T16:26:15 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19177" started-at="2019-10-28T12:37:24 PDT" finished-at="2019-10-28T12:37:43 PDT">
-      <class name="com.test.test10.parameterization.xcel.reading.TestNG10Parameterized1DExpressRegTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.test10.parameterization.xcel.reading.TestNG10Parameterized1DExpressRegTest@2173f6d9]" name="setUp" is-config="true" duration-ms="8933" started-at="2019-10-28T12:37:24 PDT" finished-at="2019-10-28T12:37:33 PDT">
+    <test name="TC1" duration-ms="16212" started-at="2019-10-28T16:25:59 PDT" finished-at="2019-10-28T16:26:15 PDT">
+      <class name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest">
+        <test-method status="PASS" signature="prepareTest(java.lang.String)[pri:0, instance:com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest@6f195bc3]" name="prepareTest" is-config="true" duration-ms="7369" started-at="2019-10-28T16:25:59 PDT" finished-at="2019-10-28T16:26:06 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateCreateNewContact()[pri:0, instance:com.test.test10.parameterization.xcel.reading.TestNG10Parameterized1DExpressRegTest@2173f6d9]" name="validateCreateNewContact" duration-ms="6991" started-at="2019-10-28T12:37:33 PDT" finished-at="2019-10-28T12:37:40 PDT">
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="googleParallelSearchTest(java.lang.String)[pri:0, instance:com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest@6f195bc3]" name="googleParallelSearchTest" duration-ms="8787" started-at="2019-10-28T16:26:06 PDT" finished-at="2019-10-28T16:26:15 PDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edible statues]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateCreateNewContact -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test10.parameterization.xcel.reading.TestNG10Parameterized1DExpressRegTest@2173f6d9]" name="tearDown" is-config="true" duration-ms="3206" started-at="2019-10-28T12:37:40 PDT" finished-at="2019-10-28T12:37:43 PDT">
+        </test-method> <!-- googleParallelSearchTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest@6f195bc3]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-28T16:26:15 PDT" finished-at="2019-10-28T16:26:15 PDT">
           <reporter-output>
-            <line>
-              <![CDATA[Browser Session End]]>
-            </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.test.test10.parameterization.xcel.reading.TestNG10Parameterized1DExpressRegTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest -->
+    </test> <!-- TC1 -->
+  </suite> <!-- Parallel Tests with Multi-Threading Suite -->
 </testng-results>

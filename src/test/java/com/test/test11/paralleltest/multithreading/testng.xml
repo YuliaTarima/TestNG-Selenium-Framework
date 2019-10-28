@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Tests with Multi-Threading Suite"
+	parallel="tests" thread-count="4">
+
+	<test name="TC1">
+		<parameter name="browser" value="chrome" />
+		<parameter name="search" value="edible statues" />
+		<classes>
+			<class
+				name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="TC2">
+		<parameter name="browser" value="chrome" />
+		<parameter name="search" value="inflatable scientists" />
+		<classes>
+			<class
+				name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="TC3">
+		<parameter name="browser" value="chrome" />
+		<parameter name="search" value="floatable stars" />
+		<classes>
+			<class
+				name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="TC4">
+		<parameter name="browser" value="chrome" />
+		<parameter name="search" value="furry fish" />
+		<classes>
+			<class
+				name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="search" value="param-val-not-found"/>
+  <parameter name="browser" value="param-val-not-found"/>
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.test10.parameterization.xcel.reading.TestNG09XcelReaderExpressRegTest">
+      <class name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest">
         <methods>
           <include name="tearDown"/>
-          <include name="ExpressRegPageTest"/>
-          <include name="setUp"/>
+          <include name="googleParallelSearchTest" invocation-numbers="0"/>
+          <include name="prepareTest"/>
         </methods>
-      </class> <!-- com.test.test10.parameterization.xcel.reading.TestNG09XcelReaderExpressRegTest -->
+      </class> <!-- com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
