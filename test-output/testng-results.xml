@@ -2,38 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Parallel Tests with Multi-Threading Suite" duration-ms="16212" started-at="2019-10-28T16:25:59 PDT" finished-at="2019-10-28T16:26:15 PDT">
+  <suite name="Default suite" duration-ms="67" started-at="2019-10-29T19:32:17 PDT" finished-at="2019-10-29T19:32:17 PDT">
     <groups>
     </groups>
-    <test name="TC1" duration-ms="16212" started-at="2019-10-28T16:25:59 PDT" finished-at="2019-10-28T16:26:15 PDT">
-      <class name="com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest">
-        <test-method status="PASS" signature="prepareTest(java.lang.String)[pri:0, instance:com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest@6f195bc3]" name="prepareTest" is-config="true" duration-ms="7369" started-at="2019-10-28T16:25:59 PDT" finished-at="2019-10-28T16:26:06 PDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="67" started-at="2019-10-29T19:32:17 PDT" finished-at="2019-10-29T19:32:17 PDT">
+      <class name="com.test.test10.parameterization.factory2.Factory2Test">
+        <test-method status="PASS" signature="Factory2Method()[pri:0, instance:com.test.test10.parameterization.factory2.Factory2Test@1563da5]" name="Factory2Method" duration-ms="14" started-at="2019-10-29T19:32:17 PDT" finished-at="2019-10-29T19:32:17 PDT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="googleParallelSearchTest(java.lang.String)[pri:0, instance:com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest@6f195bc3]" name="googleParallelSearchTest" duration-ms="8787" started-at="2019-10-28T16:26:06 PDT" finished-at="2019-10-28T16:26:15 PDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edible statues]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- googleParallelSearchTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest@6f195bc3]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-10-28T16:26:15 PDT" finished-at="2019-10-28T16:26:15 PDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.test.test11.paralleltest.multithreading.GoogleParallelSerchTest -->
-    </test> <!-- TC1 -->
-  </suite> <!-- Parallel Tests with Multi-Threading Suite -->
+        </test-method> <!-- Factory2Method -->
+      </class> <!-- com.test.test10.parameterization.factory2.Factory2Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

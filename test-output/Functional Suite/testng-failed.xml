@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Functional Suite]">
-  <listeners>
-    <listener class-name="com.test.test07.listeners.onfailure.xml.Listeners"/>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-  </listeners>
   <test thread-count="5" name="Validate Title Test(failed)">
+    <groups>
+      <run>
+        <exclude name="functional"/>
+      </run>
+    </groups>
     <classes>
       <class name="com.test.test03.softassertion.TestCase2SoftAssert">
         <methods>
@@ -16,23 +17,12 @@
       </class> <!-- com.test.test03.softassertion.TestCase2SoftAssert -->
     </classes>
   </test> <!-- Validate Title Test(failed) -->
-  <test thread-count="5" name="Dependency Test(failed)">
-    <classes>
-      <class name="com.test.test04.dependency.TestCase3DependsOnMethods">
-        <methods>
-          <include name="launchBrowser"/>
-          <include name="doUserRegistration"/>
-          <include name="closeBrowser"/>
-          <include name="setUp"/>
-          <include name="creatingDBConn"/>
-          <include name="doUserLogin"/>
-          <include name="tearDown"/>
-          <include name="closingDBConn"/>
-        </methods>
-      </class> <!-- com.test.test04.dependency.TestCase3DependsOnMethods -->
-    </classes>
-  </test> <!-- Dependency Test(failed) -->
   <test thread-count="5" name="Failure Test(failed)">
+    <groups>
+      <run>
+        <exclude name="functional"/>
+      </run>
+    </groups>
     <classes>
       <class name="com.test.test07.listeners.onfailure.xml.TestFailureWithXmlListener">
         <methods>

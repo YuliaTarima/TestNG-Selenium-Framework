@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Include Exclude Group Suite">
+
+	<test thread-count="5" name="Include Exclude Sanity Group Test">
+
+		<groups>
+			<run>
+				<include name="sanity-group"></include>
+				<exclude name="smoke-group"/>
+			</run>
+		</groups>
+
+		<classes>
+			<class
+				name="com.test.test02.annotations.includeexclude.groups.TestBelongsToSingleGroup" />
+		</classes>
+
+	</test> <!-- Include Exclude Group Test -->
+
+	<test thread-count="5" name="Include Exclude Regression Group Test">
+
+		<groups>
+			<run>
+				<include name="regression-group"></include>
+				<!-- <exclude name="sanity-group"/> -->
+			</run>
+		</groups>
+
+		<classes>
+			<class
+				name="com.test.test02.annotations.includeexclude.groups.TestBelongsToSingleGroup" />
+		</classes>
+
+	</test> <!-- Include Exclude Group Test -->
+
+</suite> <!-- Include Exclude Group Suite -->

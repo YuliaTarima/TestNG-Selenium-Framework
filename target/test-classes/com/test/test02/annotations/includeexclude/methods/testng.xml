@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Bookings Functional Suite">
+	<test thread-count="5" name="Bookings Test">
+		<classes>
+			<class
+				name="com.test.test02.annotations.includeexclude.methods.BookHolidayPackage" />
+			<class
+				name="com.test.test02.annotations.includeexclude.methods.BookFlight">
+				<methods>
+				<!-- use of regular expression -->
+				<include name="bookFlight_OneWay.*"/>
+				</methods>
+			</class>
+
+			<class
+				name="com.test.test02.annotations.includeexclude.methods.BookHotel">
+				<methods>
+					<include name="bookHotel__destinationCity_TC1" />
+				</methods>
+			</class>
+
+			<class
+				name="com.test.test02.annotations.includeexclude.methods.FlightStatus">
+				<methods>
+					<exclude name="flightStatus_TC1" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Bookings Test -->
+</suite> <!-- Bookings Functional Suite -->

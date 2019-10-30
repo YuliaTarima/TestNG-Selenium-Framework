@@ -18,16 +18,11 @@ import com.util.TestUtil;
 public class GoogleParallelSerchTest extends Base {
 
 	/*
+	 * run this through 
+	 * /TestngFramework/src/test/java/com/test/test11/paralleltest/multithreading/testng.xml
 	 * 
-	 * 
-	 * see the report file in test-output/ExtentReportV4/*.html
 	 */
-//	@BeforeMethod
-//	public void setUp() {
-//		setWebDriverManager("chrome");
-//	}
 
-	//public WebDriver drievr = null;
 
 	@BeforeMethod
 	@Parameters({ "browser" })
@@ -45,6 +40,9 @@ public class GoogleParallelSerchTest extends Base {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		
+		//make sure you are running on different threads
+		System.out.println("I am inside test 1. Thread: "+Thread.currentThread().getId());
 
 		WebElement searchBox = driver.findElement(By.name("q"));
 		searchBox.clear();
@@ -56,8 +54,7 @@ public class GoogleParallelSerchTest extends Base {
 
 	@AfterMethod
 	public void tearDown() {
-		//DriverFactory.getInstance().killDriver();//quits the particular test
-		//driver.quit();//quits all browser window
+		DriverFactory.getInstance().killDriver();//quits the particular test
 	}
 
 }

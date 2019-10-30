@@ -11,7 +11,7 @@
 
 	<test name="Login Test">
 		<classes>
-			<class name="com.test.test01.annotationsequence.TestCase1" />
+			<class name="com.test.test01.annotations.sequence.TestCase1" />
 		</classes>
 	</test> <!-- Test -->
 
