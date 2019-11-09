@@ -1,17 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="3" failed="3" ignored="0" total="9" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67" started-at="2019-10-29T19:32:17 PDT" finished-at="2019-10-29T19:32:17 PDT">
+  <suite name="Factory with Dependencies Suite" duration-ms="143" started-at="2019-10-31T14:56:19 PDT" finished-at="2019-10-31T14:56:19 PDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="67" started-at="2019-10-29T19:32:17 PDT" finished-at="2019-10-29T19:32:17 PDT">
-      <class name="com.test.test10.parameterization.factory2.Factory2Test">
-        <test-method status="PASS" signature="Factory2Method()[pri:0, instance:com.test.test10.parameterization.factory2.Factory2Test@1563da5]" name="Factory2Method" duration-ms="14" started-at="2019-10-29T19:32:17 PDT" finished-at="2019-10-29T19:32:17 PDT">
+    <test name="Factory with Dependencies Test" duration-ms="143" started-at="2019-10-31T14:56:19 PDT" finished-at="2019-10-31T14:56:19 PDT">
+      <class name="com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest">
+        <test-method status="FAIL" signature="loginTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@2f943d71, instance params:[]]" name="loginTest" duration-ms="14" started-at="2019-10-31T14:56:19 PDT" finished-at="2019-10-31T14:56:19 PDT">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest.loginTest(FactoryWithDependenciesTest.java:19)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Factory2Method -->
-      </class> <!-- com.test.test10.parameterization.factory2.Factory2Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="searchPageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@2f943d71, instance params:[]]" name="searchPageTest" duration-ms="8" started-at="2019-10-31T14:56:19 PDT" finished-at="2019-10-31T14:56:19 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPageTest -->
+        <test-method status="SKIP" signature="homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@2f943d71, instance params:[]]" name="homePageTest" duration-ms="0" started-at="2019-10-31T14:56:19 PDT" depends-on-methods="com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest.loginTest" finished-at="2019-10-31T14:56:19 PDT">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method FactoryWithDependenciesTest.homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@2f943d71, instance params:[]] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method FactoryWithDependenciesTest.homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@2f943d71, instance params:[]] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageTest -->
+        <test-method status="FAIL" signature="loginTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@4b553d26, instance params:[]]" name="loginTest" duration-ms="2" started-at="2019-10-31T14:56:19 PDT" finished-at="2019-10-31T14:56:19 PDT">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest.loginTest(FactoryWithDependenciesTest.java:19)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="SKIP" signature="homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@4b553d26, instance params:[]]" name="homePageTest" duration-ms="0" started-at="2019-10-31T14:56:19 PDT" depends-on-methods="com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest.loginTest" finished-at="2019-10-31T14:56:19 PDT">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method FactoryWithDependenciesTest.homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@4b553d26, instance params:[]] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method FactoryWithDependenciesTest.homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@4b553d26, instance params:[]] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageTest -->
+        <test-method status="PASS" signature="searchPageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@4b553d26, instance params:[]]" name="searchPageTest" duration-ms="6" started-at="2019-10-31T14:56:19 PDT" finished-at="2019-10-31T14:56:19 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPageTest -->
+        <test-method status="FAIL" signature="loginTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@80503, instance params:[]]" name="loginTest" duration-ms="2" started-at="2019-10-31T14:56:19 PDT" finished-at="2019-10-31T14:56:19 PDT">
+          <exception class="java.lang.ArithmeticException">
+            <message>
+              <![CDATA[/ by zero]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest.loginTest(FactoryWithDependenciesTest.java:19)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ArithmeticException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="SKIP" signature="homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@80503, instance params:[]]" name="homePageTest" duration-ms="0" started-at="2019-10-31T14:56:19 PDT" depends-on-methods="com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest.loginTest" finished-at="2019-10-31T14:56:19 PDT">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method FactoryWithDependenciesTest.homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@80503, instance params:[]] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method FactoryWithDependenciesTest.homePageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@80503, instance params:[]] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageTest -->
+        <test-method status="PASS" signature="searchPageTest()[pri:0, instance:com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest@80503, instance params:[]]" name="searchPageTest" duration-ms="2" started-at="2019-10-31T14:56:19 PDT" finished-at="2019-10-31T14:56:19 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchPageTest -->
+      </class> <!-- com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest -->
+    </test> <!-- Factory with Dependencies Test -->
+  </suite> <!-- Factory with Dependencies Suite -->
 </testng-results>

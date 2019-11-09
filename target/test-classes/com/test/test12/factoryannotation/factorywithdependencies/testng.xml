@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Factory with Dependencies Suite" group-by-instances="true" verbose="5">
+  <test thread-count="5" name="Factory with Dependencies Test">
+    <classes>
+      <class name="com.test.test12.factoryannotation.factorywithdependencies.FactoryClass"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

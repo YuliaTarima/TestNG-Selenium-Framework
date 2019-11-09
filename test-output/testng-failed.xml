@@ -3,19 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.test02.annotations.dependson.groups.DependsOnGroupsTest">
+      <class name="com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest">
         <methods>
-          <include name="doUserRegistration"/>
-          <include name="thirdTest"/>
-          <include name="launchBrowser"/>
-          <include name="creatingDBConn"/>
-          <include name="setUp"/>
-          <include name="closeBrowser"/>
-          <include name="doUserLogin"/>
-          <include name="fourthTest"/>
-          <include name="tearDown"/>
+          <include name="homePageTest"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.test.test02.annotations.dependson.groups.DependsOnGroupsTest -->
+      </class> <!-- com.test.test12.factoryannotation.factorywithdependencies.FactoryWithDependenciesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
